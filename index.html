@@ -14,6 +14,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Smooth scrolling with offset for fixed header */
+      html {
+        scroll-padding-top: 80px;
+      }
+      
+      /* Improved focus states for accessibility */
+      a:focus-visible, button:focus-visible {
+        outline: 2px solid #10B981;
+        outline-offset: 2px;
+      }
+      
+      /* Loading state for iframe */
+      #leadFormIframe {
+        min-height: 1200px;
+      }
+      
+      @media (max-width: 640px) {
+        #leadFormIframe {
+          min-height: 1400px;
+        }
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
@@ -41,10 +64,13 @@
         <a href="#" class="text-lg font-semibold text-brand-primary">Grand River AI</a>
         <button
           id="navToggle"
-          class="inline-flex items-center rounded-md border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:border-brand-primary hover:text-brand-primary lg:hidden"
+          class="inline-flex items-center justify-center rounded-md border border-slate-200 p-2.5 text-slate-700 shadow-sm transition hover:border-brand-primary hover:text-brand-primary focus:border-brand-primary focus:text-brand-primary lg:hidden"
           aria-expanded="false"
+          aria-label="Toggle navigation menu"
         >
-          <span>Menu</span>
+          <svg id="navToggleIcon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
         <nav id="navMenu" class="hidden w-full flex-col gap-6 pt-4 text-sm lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:pt-0">
           <a href="#services" class="text-slate-600 transition hover:text-brand-primary">Services</a>
@@ -60,14 +86,14 @@
         </nav>
       </div>
       <div id="mobileNavPanel" class="hidden border-t border-slate-200 bg-white lg:hidden">
-        <div class="mx-auto flex max-w-6xl flex-col space-y-4 px-4 py-4">
-          <a href="#services" class="text-slate-700 transition hover:text-brand-primary">Services</a>
-          <a href="#case-study" class="text-slate-700 transition hover:text-brand-primary">Results</a>
-          <a href="#about" class="text-slate-700 transition hover:text-brand-primary">About</a>
-          <a href="#contact" class="text-slate-700 transition hover:text-brand-primary">Contact</a>
+        <div class="mx-auto flex max-w-6xl flex-col space-y-1 px-4 py-4">
+          <a href="#services" class="rounded-md px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50 hover:text-brand-primary">Services</a>
+          <a href="#case-study" class="rounded-md px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50 hover:text-brand-primary">Results</a>
+          <a href="#about" class="rounded-md px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50 hover:text-brand-primary">About</a>
+          <a href="#contact" class="rounded-md px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50 hover:text-brand-primary">Contact</a>
           <a
             href="#contact"
-            class="inline-flex items-center justify-center rounded-full bg-brand-accent px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-accent/30 transition hover:bg-emerald-500"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-base font-semibold text-white shadow-lg shadow-brand-accent/30 transition hover:bg-emerald-500 active:scale-95"
           >
             Get a Free Consultation
           </a>
@@ -90,21 +116,21 @@
             <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href="#contact"
-                class="inline-flex items-center justify-center rounded-full bg-brand-accent px-8 py-3 text-base font-semibold text-white shadow-xl shadow-brand-accent/30 transition hover:bg-emerald-500"
+                class="inline-flex items-center justify-center rounded-full bg-brand-accent px-8 py-4 text-base font-semibold text-white shadow-xl shadow-brand-accent/30 transition hover:bg-emerald-500 hover:shadow-2xl active:scale-95 sm:py-3"
               >
                 Book a Free 20-Minute Call
               </a>
-              <p class="text-sm text-slate-500">
+              <p class="text-sm text-slate-500 sm:text-left text-center">
                 Trusted by local entrepreneurs to unlock efficiency without the overwhelm.
               </p>
             </div>
           </div>
           <div class="relative flex flex-1 justify-end">
-            <div class="w-full max-w-md rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-xl shadow-brand-primary/10 backdrop-blur">
+            <div class="w-full max-w-md rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-xl shadow-brand-primary/10 backdrop-blur sm:p-8">
               <p class="text-sm font-semibold uppercase tracking-wide text-brand-primary">What we deliver</p>
               <ul class="mt-6 space-y-5 text-sm text-slate-600">
                 <li class="flex items-start gap-3">
-                  <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                  <span class="mt-0.5 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a3 3 0 003.35 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -112,7 +138,7 @@
                   <span>Personalized automation roadmap tailored to your goals.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent">
+                  <span class="mt-0.5 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-3-3v6m5-13H7a2 2 0 00-2 2v16l7-4 7 4V4a2 2 0 00-2-2z" />
                     </svg>
@@ -120,7 +146,7 @@
                   <span>Implementation support from idea to launch so nothing falls through the cracks.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                  <span class="mt-0.5 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.25 7.5l-2.955 5.91a1 1 0 00.892 1.44H14.81a1 1 0 00.893-1.44L12.75 7.5m0 0L9.5 3.75M12.75 7.5l3.25-3.75" />
                     </svg>
@@ -141,37 +167,37 @@
               Practical, results-driven solutions that bring emerging AI capabilities to your everyday operations.
             </p>
           </div>
-          <div class="mt-12 grid gap-8 lg:grid-cols-3">
-            <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:bg-white/10 sm:p-8">
               <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8h10M7 12h5m-5 4h3m4 0h3l2 2V6a2 2 0 00-2-2H7a2 2 0 00-2 2v12" />
                 </svg>
               </div>
               <h3 class="mt-6 text-xl font-semibold text-white">AI-Powered Customer Service</h3>
-              <p class="mt-4 text-sm text-slate-300">
+              <p class="mt-4 text-sm text-slate-300 sm:text-base">
                 Deploy smart chatbots to answer customer questions 24/7, freeing up your team.
               </p>
             </article>
-            <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:bg-white/10 sm:p-8">
               <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m4 0V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10m16 0h-4m-6 0H5" />
                 </svg>
               </div>
               <h3 class="mt-6 text-xl font-semibold text-white">Intelligent Process Automation</h3>
-              <p class="mt-4 text-sm text-slate-300">
+              <p class="mt-4 text-sm text-slate-300 sm:text-base">
                 Automate repetitive daily tasks like data entry, scheduling, and invoicing to save hundreds of hours.
               </p>
             </article>
-            <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:bg-white/10 sm:col-span-2 sm:p-8 lg:col-span-1">
               <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1021 12h-9V3.055z" />
                 </svg>
               </div>
               <h3 class="mt-6 text-xl font-semibold text-white">Data-Driven Insights</h3>
-              <p class="mt-4 text-sm text-slate-300">
+              <p class="mt-4 text-sm text-slate-300 sm:text-base">
                 Turn your business data into clear, actionable insights to make smarter, more profitable decisions.
               </p>
             </article>
@@ -212,36 +238,36 @@
           <div class="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start">
             <div class="space-y-4">
               <h3 class="text-xl font-semibold text-slate-900">Objective</h3>
-              <p class="text-sm text-slate-600">Reduce admin time and improve lead response speed without hiring.</p>
+              <p class="text-sm text-slate-600 sm:text-base">Reduce admin time and improve lead response speed without hiring.</p>
               <h3 class="mt-6 text-xl font-semibold text-slate-900">Solution</h3>
-              <ul class="mt-2 space-y-2 text-sm text-slate-600">
-                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> Web form → CRM with automatic lead enrichment</li>
-                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> Auto‑reply with Calendly booking + reminders</li>
-                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> Auto‑drafted quotes from templates</li>
+              <ul class="mt-2 space-y-3 text-sm text-slate-600 sm:text-base">
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> <span>Web form → CRM with automatic lead enrichment</span></li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> <span>Auto‑reply with Calendly booking + reminders</span></li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> <span>Auto‑drafted quotes from templates</span></li>
               </ul>
             </div>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
-                <p class="text-3xl font-bold text-slate-900">−83%</p>
-                <p class="mt-1 text-xs text-slate-600">Lead response time (6h → 40m)</p>
+            <div class="grid gap-4 grid-cols-2">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center transition hover:shadow-md sm:p-6">
+                <p class="text-2xl font-bold text-slate-900 sm:text-3xl">−83%</p>
+                <p class="mt-2 text-xs text-slate-600 sm:text-sm">Lead response time (6h → 40m)</p>
               </div>
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
-                <p class="text-3xl font-bold text-slate-900">+28%</p>
-                <p class="mt-1 text-xs text-slate-600">Booked consultations in 30 days</p>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center transition hover:shadow-md sm:p-6">
+                <p class="text-2xl font-bold text-slate-900 sm:text-3xl">+28%</p>
+                <p class="mt-2 text-xs text-slate-600 sm:text-sm">Booked consultations in 30 days</p>
               </div>
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
-                <p class="text-3xl font-bold text-slate-900">12 hrs/wk</p>
-                <p class="mt-1 text-xs text-slate-600">Admin time saved</p>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center transition hover:shadow-md sm:p-6">
+                <p class="text-2xl font-bold text-slate-900 sm:text-3xl">12 hrs/wk</p>
+                <p class="mt-2 text-xs text-slate-600 sm:text-sm">Admin time saved</p>
               </div>
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
-                <p class="text-3xl font-bold text-slate-900">3 weeks</p>
-                <p class="mt-1 text-xs text-slate-600">Payback period</p>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center transition hover:shadow-md sm:p-6">
+                <p class="text-2xl font-bold text-slate-900 sm:text-3xl">3 weeks</p>
+                <p class="mt-2 text-xs text-slate-600 sm:text-sm">Payback period</p>
               </div>
             </div>
           </div>
           <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" class="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-slate-900 shadow-md shadow-brand-accent/30 transition hover:bg-emerald-400" target="_blank" rel="noopener">Book a Free 20‑Minute Call</a>
-            <a href="#contact" class="text-sm font-medium text-brand-primary hover:underline">See how this applies to you →</a>
+            <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" class="inline-flex w-full items-center justify-center rounded-full bg-brand-accent px-6 py-4 text-sm font-semibold text-slate-900 shadow-md shadow-brand-accent/30 transition hover:bg-emerald-400 active:scale-95 sm:w-auto sm:py-3" target="_blank" rel="noopener">Book a Free 20‑Minute Call</a>
+            <a href="#contact" class="text-sm font-medium text-brand-primary hover:underline sm:text-base">See how this applies to you →</a>
           </div>
           <p class="mt-4 text-center text-xs text-slate-500">Results are illustrative and may vary by business and implementation.</p>
         </div>
@@ -293,18 +319,18 @@
             <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">A Simple, Proven Process</h2>
             <p class="mt-4 text-base text-slate-600">From idea to impact in weeks—not months.</p>
           </div>
-          <div class="mt-12 grid gap-6 lg:grid-cols-3">
-            <div class="rounded-2xl border border-slate-200 bg-white p-6">
-              <p class="text-sm font-semibold text-brand-primary">1) Free Discovery</p>
-              <p class="mt-3 text-sm text-slate-600">We learn your goals and identify quick wins with clear ROI.</p>
+          <div class="mt-12 grid gap-6 sm:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+              <p class="text-base font-semibold text-brand-primary sm:text-lg">1) Free Discovery</p>
+              <p class="mt-3 text-sm text-slate-600 sm:text-base">We learn your goals and identify quick wins with clear ROI.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6">
-              <p class="text-sm font-semibold text-brand-primary">2) Pilot & Launch</p>
-              <p class="mt-3 text-sm text-slate-600">We prototype the highest‑impact workflow, then deploy with your team.</p>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+              <p class="text-base font-semibold text-brand-primary sm:text-lg">2) Pilot & Launch</p>
+              <p class="mt-3 text-sm text-slate-600 sm:text-base">We prototype the highest‑impact workflow, then deploy with your team.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6">
-              <p class="text-sm font-semibold text-brand-primary">3) Measure & Improve</p>
-              <p class="mt-3 text-sm text-slate-600">We track results and tune automations so value compounds over time.</p>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+              <p class="text-base font-semibold text-brand-primary sm:text-lg">3) Measure & Improve</p>
+              <p class="mt-3 text-sm text-slate-600 sm:text-base">We track results and tune automations so value compounds over time.</p>
             </div>
           </div>
         </div>
@@ -411,12 +437,22 @@
       const navToggle = document.getElementById('navToggle');
       const navMenu = document.getElementById('navMenu');
       const mobileNavPanel = document.getElementById('mobileNavPanel');
+      const navToggleIcon = document.getElementById('navToggleIcon');
 
       if (navToggle) {
         navToggle.addEventListener('click', () => {
           const isOpen = mobileNavPanel.classList.toggle('hidden');
           navMenu.classList.toggle('hidden', !window.matchMedia('(min-width: 1024px)').matches);
           navToggle.setAttribute('aria-expanded', String(!isOpen));
+          
+          // Toggle hamburger icon to X
+          if (navToggleIcon) {
+            if (!isOpen) {
+              navToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            } else {
+              navToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            }
+          }
         });
       }
 
@@ -425,6 +461,10 @@
         link.addEventListener('click', () => {
           mobileNavPanel.classList.add('hidden');
           navToggle.setAttribute('aria-expanded', 'false');
+          // Reset icon to hamburger
+          if (navToggleIcon) {
+            navToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+          }
         }),
       );
 
