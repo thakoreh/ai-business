@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Solutions Co. | AI Automation for Paris, Ontario & KWC</title>
+    <meta name="description" content="Local AI and automation consulting for small businesses in Paris, Ontario and the Kitchener–Waterloo–Cambridge region. Book a free 20-minute consultation." />
+    <meta property="og:title" content="AI Automation for Paris, Ontario & KWC" />
+    <meta property="og:description" content="We help local businesses automate tasks, reduce costs, and grow faster with practical AI solutions. Book a free consultation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_CA" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                primary: '#1E3A8A',
+                accent: '#10B981',
+              },
+            },
+            backgroundImage: {
+              'hero-gradient': 'radial-gradient(circle at top left, rgba(30,58,138,0.25), transparent 55%), radial-gradient(circle at bottom right, rgba(16,185,129,0.2), transparent 50%)',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans text-slate-900 bg-slate-50">
+    <header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-6">
+        <a href="#" class="text-lg font-semibold text-brand-primary">AI Solutions Co.</a>
+        <button
+          id="navToggle"
+          class="inline-flex items-center rounded-md border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:border-brand-primary hover:text-brand-primary lg:hidden"
+          aria-expanded="false"
+        >
+          <span>Menu</span>
+        </button>
+        <nav id="navMenu" class="hidden w-full flex-col gap-6 pt-4 text-sm lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:pt-0">
+          <a href="#services" class="text-slate-600 transition hover:text-brand-primary">Services</a>
+          <a href="#case-study" class="text-slate-600 transition hover:text-brand-primary">Results</a>
+          <a href="#about" class="text-slate-600 transition hover:text-brand-primary">About</a>
+          <a href="#contact" class="text-slate-600 transition hover:text-brand-primary">Contact</a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full bg-brand-accent px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-accent/30 transition hover:bg-emerald-500"
+          >
+            Get a Free Consultation
+          </a>
+        </nav>
+      </div>
+      <div id="mobileNavPanel" class="hidden border-t border-slate-200 bg-white lg:hidden">
+        <div class="mx-auto flex max-w-6xl flex-col space-y-4 px-4 py-4">
+          <a href="#services" class="text-slate-700 transition hover:text-brand-primary">Services</a>
+          <a href="#case-study" class="text-slate-700 transition hover:text-brand-primary">Results</a>
+          <a href="#about" class="text-slate-700 transition hover:text-brand-primary">About</a>
+          <a href="#contact" class="text-slate-700 transition hover:text-brand-primary">Contact</a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full bg-brand-accent px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-accent/30 transition hover:bg-emerald-500"
+          >
+            Get a Free Consultation
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-24">
+      <section class="relative overflow-hidden bg-white">
+        <div class="absolute inset-0 bg-hero-gradient"></div>
+        <div class="relative mx-auto flex max-w-6xl flex-col justify-between gap-12 px-4 py-20 lg:flex-row lg:items-center lg:gap-16 lg:px-6">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center rounded-full bg-brand-primary/10 px-4 py-1 text-sm font-medium text-brand-primary">Paris, Ontario • KWC Region</span>
+            <h1 class="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Supercharge Your Business with AI.
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 lg:text-xl">
+              We help local businesses in Paris and KWC automate tasks, reduce costs, and grow faster with custom, affordable AI solutions.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full bg-brand-accent px-8 py-3 text-base font-semibold text-white shadow-xl shadow-brand-accent/30 transition hover:bg-emerald-500"
+              >
+                Book a Free 20-Minute Call
+              </a>
+              <p class="text-sm text-slate-500">
+                Trusted by local entrepreneurs to unlock efficiency without the overwhelm.
+              </p>
+            </div>
+          </div>
+          <div class="relative flex flex-1 justify-end">
+            <div class="w-full max-w-md rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-xl shadow-brand-primary/10 backdrop-blur">
+              <p class="text-sm font-semibold uppercase tracking-wide text-brand-primary">What we deliver</p>
+              <ul class="mt-6 space-y-5 text-sm text-slate-600">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a3 3 0 003.35 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                  <span>Personalized automation roadmap tailored to your goals.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-3-3v6m5-13H7a2 2 0 00-2 2v16l7-4 7 4V4a2 2 0 00-2-2z" />
+                    </svg>
+                  </span>
+                  <span>Implementation support from idea to launch so nothing falls through the cracks.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.25 7.5l-2.955 5.91a1 1 0 00.892 1.44H14.81a1 1 0 00.893-1.44L12.75 7.5m0 0L9.5 3.75M12.75 7.5l3.25-3.75" />
+                    </svg>
+                  </span>
+                  <span>Ongoing optimization to keep your AI delivering measurable results.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-slate-900 py-20 text-white">
+        <div class="mx-auto max-w-6xl px-4 lg:px-6">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-semibold sm:text-4xl">How We Can Help You Succeed</h2>
+            <p class="mt-4 text-base text-slate-300">
+              Practical, results-driven solutions that bring emerging AI capabilities to your everyday operations.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-8 lg:grid-cols-3">
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8h10M7 12h5m-5 4h3m4 0h3l2 2V6a2 2 0 00-2-2H7a2 2 0 00-2 2v12" />
+                </svg>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold text-white">AI-Powered Customer Service</h3>
+              <p class="mt-4 text-sm text-slate-300">
+                Deploy smart chatbots to answer customer questions 24/7, freeing up your team.
+              </p>
+            </article>
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m4 0V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10m16 0h-4m-6 0H5" />
+                </svg>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold text-white">Intelligent Process Automation</h3>
+              <p class="mt-4 text-sm text-slate-300">
+                Automate repetitive daily tasks like data entry, scheduling, and invoicing to save hundreds of hours.
+              </p>
+            </article>
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1021 12h-9V3.055z" />
+                </svg>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold text-white">Data-Driven Insights</h3>
+              <p class="mt-4 text-sm text-slate-300">
+                Turn your business data into clear, actionable insights to make smarter, more profitable decisions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="proof" class="bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-6">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Why Local Businesses Trust Us</h2>
+            <p class="mt-4 text-base text-slate-600">Real, practical outcomes. Here’s what local owners say.</p>
+          </div>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <blockquote class="text-slate-700 text-sm">“Our response time dropped from hours to minutes, and we’re saving 10+ hours a week on admin.”</blockquote>
+              <figcaption class="mt-4 text-xs text-slate-500">Owner, service business in Paris, ON</figcaption>
+            </figure>
+            <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <blockquote class="text-slate-700 text-sm">“They mapped our workflow and automated invoices end‑to‑end. It paid for itself in the first month.”</blockquote>
+              <figcaption class="mt-4 text-xs text-slate-500">Manager, trades company in Brant County</figcaption>
+            </figure>
+            <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <blockquote class="text-slate-700 text-sm">“Clear, no‑jargon guidance. We launched a chatbot that actually helps customers.”</blockquote>
+              <figcaption class="mt-4 text-xs text-slate-500">Retail owner, Kitchener‑Waterloo</figcaption>
+            </figure>
+          </div>
+          <p class="mt-6 text-xs text-slate-400 text-center">Replace these placeholders with real client quotes when available.</p>
+        </div>
+      </section>
+
+      <section id="case-study" class="bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-6">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Local Case Study</h2>
+            <p class="mt-4 text-base text-slate-600">Paris, Ontario service business — automated intake, scheduling, and follow‑ups.</p>
+          </div>
+          <div class="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div class="space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Objective</h3>
+              <p class="text-sm text-slate-600">Reduce admin time and improve lead response speed without hiring.</p>
+              <h3 class="mt-6 text-xl font-semibold text-slate-900">Solution</h3>
+              <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> Web form → CRM with automatic lead enrichment</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> Auto‑reply with Calendly booking + reminders</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent"></span> Auto‑drafted quotes from templates</li>
+              </ul>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
+                <p class="text-3xl font-bold text-slate-900">−83%</p>
+                <p class="mt-1 text-xs text-slate-600">Lead response time (6h → 40m)</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
+                <p class="text-3xl font-bold text-slate-900">+28%</p>
+                <p class="mt-1 text-xs text-slate-600">Booked consultations in 30 days</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
+                <p class="text-3xl font-bold text-slate-900">12 hrs/wk</p>
+                <p class="mt-1 text-xs text-slate-600">Admin time saved</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
+                <p class="text-3xl font-bold text-slate-900">3 weeks</p>
+                <p class="mt-1 text-xs text-slate-600">Payback period</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" class="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-slate-900 shadow-md shadow-brand-accent/30 transition hover:bg-emerald-400" target="_blank" rel="noopener">Book a Free 20‑Minute Call</a>
+            <a href="#contact" class="text-sm font-medium text-brand-primary hover:underline">See how this applies to you →</a>
+          </div>
+          <p class="mt-4 text-center text-xs text-slate-500">Results are illustrative and may vary by business and implementation.</p>
+        </div>
+      </section>
+
+      <section id="about" class="bg-white py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 lg:flex-row lg:items-center lg:gap-20 lg:px-6">
+          <div class="flex-1 space-y-6">
+            <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Your Local Partner in Business Growth</h2>
+            <p class="text-lg text-slate-600">
+              Hi, I’m a local AI consultant based in Paris, Ontario. I started this business with one goal: give small and mid‑size companies the same advantages big organizations enjoy—without the overwhelm or heavy price tag.
+            </p>
+            <p class="text-base text-slate-500">
+              From the first conversation, you’ll get clear guidance instead of technical jargon. Together, we’ll map quick wins and long‑term strategies that fit your team, customers, and bottom line.
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 p-10 shadow-lg shadow-brand-primary/10">
+              <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-accent/10"></div>
+              <div class="relative space-y-6">
+                <h3 class="text-2xl font-semibold text-slate-900">Why local owners choose us</h3>
+                <ul class="space-y-4 text-sm text-slate-600">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    Tailored roadmaps that honor your existing tools and workflows.
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    Transparent pricing and timelines that keep you in control.
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    Local support you can call, text, or meet with whenever you need.
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    Privacy‑first: NDAs available. Your data stays yours.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="bg-slate-50 py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-6">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">A Simple, Proven Process</h2>
+            <p class="mt-4 text-base text-slate-600">From idea to impact in weeks—not months.</p>
+          </div>
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <p class="text-sm font-semibold text-brand-primary">1) Free Discovery</p>
+              <p class="mt-3 text-sm text-slate-600">We learn your goals and identify quick wins with clear ROI.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <p class="text-sm font-semibold text-brand-primary">2) Pilot & Launch</p>
+              <p class="mt-3 text-sm text-slate-600">We prototype the highest‑impact workflow, then deploy with your team.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <p class="text-sm font-semibold text-brand-primary">3) Measure & Improve</p>
+              <p class="mt-3 text-sm text-slate-600">We track results and tune automations so value compounds over time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative overflow-hidden bg-slate-900 py-20 text-white">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-primary via-slate-900 to-slate-950 opacity-90"></div>
+        <div class="relative mx-auto max-w-5xl px-4 lg:px-6">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-semibold sm:text-4xl">Ready to See What AI Can Do For You?</h2>
+            <p class="mt-4 text-base text-slate-200">
+              There's no cost and no obligation. Fill out the form below, and we'll schedule a quick chat to explore how automation can help your specific business.
+            </p>
+          </div>
+          <div class="mt-12 space-y-8 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-brand-primary/20 backdrop-blur">
+            <div id="formEmbedWrap" class="relative overflow-hidden rounded-2xl border border-white/10 bg-white p-2">
+              <div id="formFallback" class="absolute inset-0 hidden items-center justify-center bg-white p-8 text-center">
+                <div class="mx-auto max-w-md">
+                  <p class="text-sm text-slate-700">Inline form couldn’t load here. Open it in a new tab to continue.</p>
+                  <a href="https://forms.gle/WXvGQ3M5kUEG55K99" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-2 text-sm font-semibold text-slate-900 shadow-md shadow-brand-accent/30 transition hover:bg-emerald-400">Open the Form</a>
+                </div>
+              </div>
+              <iframe
+                id="leadFormIframe"
+                title="Free AI & Automation Consultation Form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeay_bxvWbms4Tv5AIy87g2xeTAAAmwO5CgAgZgKujTmK0xYg/viewform?embedded=true"
+                class="w-full"
+                style="height: 1600px; border: 0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href="https://calendly.com/hirenthakore/ai-automation-discovery-call"
+                class="inline-flex w-full items-center justify-center rounded-full bg-brand-accent px-8 py-3 text-base font-semibold text-slate-900 shadow-xl shadow-brand-accent/40 transition hover:bg-emerald-400 sm:w-auto"
+                target="_blank" rel="noopener"
+              >
+                Book on Calendly
+              </a>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeay_bxvWbms4Tv5AIy87g2xeTAAAmwO5CgAgZgKujTmK0xYg/viewform"
+                class="inline-flex w-full items-center justify-center rounded-full border border-white/30 bg-transparent px-8 py-3 text-base font-semibold text-white/90 hover:bg-white/10 sm:w-auto"
+                target="_blank" rel="noopener"
+              >
+                Open Form
+              </a>
+              <p class="text-sm text-slate-300">Prefer to talk now? Call <a class="underline decoration-white/40 hover:decoration-white" href="tel:+12269759417">(226) 975-9417</a> and let’s get started.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="privacy" class="bg-white py-12">
+      <div class="mx-auto max-w-6xl px-4 lg:px-6">
+        <h2 class="text-xl font-semibold text-slate-900">Privacy Policy (Summary)</h2>
+        <p class="mt-3 text-sm text-slate-600">We only collect information you provide to schedule consultations or deliver services. We do not sell your data. NDAs are available upon request. If we integrate with your tools, access is limited to the minimum required and can be revoked anytime. For a detailed policy, contact <a class="underline" href="mailto:hello@aisolutionsco.com">hello@aisolutionsco.com</a>.</p>
+      </div>
+    </section>
+
+    <section id="terms" class="bg-slate-50 py-12">
+      <div class="mx-auto max-w-6xl px-4 lg:px-6">
+        <h2 class="text-xl font-semibold text-slate-900">Terms (Summary)</h2>
+        <p class="mt-3 text-sm text-slate-600">Discovery calls are free. Paid work is defined in a written scope with clear deliverables, timelines, and pricing. You retain ownership of your data and credentials. We may recommend third‑party tools; their terms apply. Results vary by use‑case and implementation.</p>
+      </div>
+    </section>
+
+    <footer class="border-t border-slate-200 bg-white py-8">
+      <div class="mx-auto max-w-6xl px-4 text-sm text-slate-600 lg:px-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <span>&copy; 2025 AI Solutions Co. All rights reserved.</span>
+          <span>Email: <a class="underline hover:text-slate-800" href="mailto:hello@aisolutionsco.com">hello@aisolutionsco.com</a> | Phone: <a class="underline hover:text-slate-800" href="tel:+12269759417">(226) 975-9417</a></span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-xs text-slate-500">
+          <a href="#privacy" class="hover:text-slate-700">Privacy Policy</a>
+          <a href="#terms" class="hover:text-slate-700">Terms</a>
+          <span>Service area: Paris, Brant County, Kitchener, Waterloo, Cambridge</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LocalBusiness schema to boost local trust/SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "AI Solutions Co.",
+        "url": "https://example.com/",
+        "telephone": "+1-226-975-9417",
+        "areaServed": ["Paris ON", "Brant County", "Kitchener", "Waterloo", "Cambridge"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paris",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        },
+        "sameAs": []
+      }
+    </script>
+
+    <script>
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      const mobileNavPanel = document.getElementById('mobileNavPanel');
+
+      if (navToggle) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = mobileNavPanel.classList.toggle('hidden');
+          navMenu.classList.toggle('hidden', !window.matchMedia('(min-width: 1024px)').matches);
+          navToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      const mobileLinks = mobileNavPanel.querySelectorAll('a[href^="#"]');
+      mobileLinks.forEach((link) =>
+        link.addEventListener('click', () => {
+          mobileNavPanel.classList.add('hidden');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }),
+      );
+
+      // Google Form embed fallback: show a helpful message if iframe can’t load
+      (function () {
+        const iframe = document.getElementById('leadFormIframe');
+        const fallback = document.getElementById('formFallback');
+        if (!iframe || !fallback) return;
+        let loaded = false;
+        iframe.addEventListener('load', () => {
+          loaded = true;
+          fallback.classList.add('hidden');
+          iframe.classList.remove('hidden');
+        });
+        // If not loaded after a short delay, show fallback and hide iframe
+        setTimeout(() => {
+          if (!loaded) {
+            fallback.classList.remove('hidden');
+            iframe.classList.add('hidden');
+          }
+        }, 2500);
+      })();
+    </script>
+  </body>
+</html>
