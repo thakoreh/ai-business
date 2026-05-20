@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand River AI | AI Automation for Businesses in Paris, Ontario and KWC Region</title>
-    <meta name="description" content="AI automation consulting for businesses in Paris, Brantford, Brant County, Kitchener, Waterloo and Cambridge. Chatbots, process automation, and lead capture that saves 100+ hours weekly.">
+    <title>Grand River AI | Production AI Systems for Ontario Businesses</title>
+    <meta name="description" content="Production AI systems for businesses in Paris, Brantford, Brant County, Kitchener, Waterloo and Cambridge. AI agents, automations, LLM integrations, dashboards, and workflow tools that ship.">
     <link rel="canonical" href="https://grandriverai.ca/">
     <meta name="geo.region" content="CA-ON">
     <meta name="geo.placename" content="Paris">
@@ -12,26 +12,30 @@
     <meta name="ICBM" content="43.1945, -80.3854">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grandriverai.ca/">
-    <meta property="og:title" content="Grand River AI | AI Automation for Paris, Ontario and KWC Region">
-    <meta property="og:description" content="AI automation consulting that saves local businesses 100+ hours weekly.">
+    <meta property="og:title" content="Grand River AI | Production AI Systems for Ontario Businesses">
+    <meta property="og:description" content="AI agents, automations, dashboards, and LLM integrations that move from idea to production.">
     <meta property="og:locale" content="en_CA">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Grand River AI | AI Automation for Paris, Ontario and KWC Region">
-    <meta name="twitter:description" content="AI automation consulting that saves local businesses 100+ hours weekly.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>G</text></svg>">
+    <meta name="twitter:title" content="Grand River AI | Production AI Systems for Ontario Businesses">
+    <meta name="twitter:description" content="Production AI systems that ship. Not just advice.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23fb7185'%3EAI%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        ivory: { 50: "#faf9f5", 100: "#f0eee6", 200: "#e3dacc", 300: "#d4cfc2" },
-                        ink: "#1d1d1f",
-                        sage: { DEFAULT: "#2d6a4f", dark: "#1b4332", light: "#d8f3dc" },
-                        muted: "#615e5b",
+                        carbon: "#0a0a0a",
+                        panel: "#111111",
+                        line: "#262626",
+                        soft: "#d4d4d8",
+                        dim: "#a1a1aa",
+                        ember: "#f97316",
+                        rose: "#ec4899"
                     },
-                    fontFamily: { sans: ["DM Sans", "system-ui", "sans-serif"] },
+                    fontFamily: {
+                        sans: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+                    }
                 }
             }
         }
@@ -44,479 +48,489 @@
         gtag("config", "G-5S07N1V724");
     </script>
     <style>
-        html { scroll-padding-top: 80px; }
-        a:focus-visible { outline: 2px solid #2d6a4f; outline-offset: 2px; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-item.open .faq-answer { max-height: 300px; }
-        .faq-item.open .faq-chevron { transform: rotate(180deg); }
-        .faq-chevron { transition: transform 0.3s ease; }
-        
-        /* Scroll animations */
-        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        
-        /* Hero entrance */
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .hero-anim { animation: fadeUp 0.8s ease forwards; }
-        .hero-d1 { animation-delay: 0.15s; opacity: 0; }
-        .hero-d2 { animation-delay: 0.3s; opacity: 0; }
-        .hero-d3 { animation-delay: 0.45s; opacity: 0; }
-        
-        /* Noise overlay */
-        .noise-overlay { position: relative; }
-        .noise-overlay::after {
-            content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0.35;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        html { scroll-padding-top: 84px; }
+        body { background: #0a0a0a; }
+        a:focus-visible, button:focus-visible { outline: 2px solid #fb7185; outline-offset: 3px; }
+        .gradient-cta { background: linear-gradient(135deg, #f97316, #ec4899); }
+        .text-gradient { background: linear-gradient(135deg, #f97316, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card-line { background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01)); }
+        .motion-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+            background-size: 56px 56px;
+            animation: grid-drift 18s linear infinite;
+            mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
         }
-        
-        /* Service card hover lift */
-        .svc-card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
-        .svc-card:hover { transform: translateY(-3px); }
-        
-        /* FAQ left accent */
-        .faq-item { border-left: 3px solid transparent; padding-left: 16px; margin-left: -19px; transition: border-color 0.2s ease; }
-        .faq-item.open, .faq-item:hover { border-left-color: #2d6a4f; }
-        
-        /* Case study glow */
-        .glow-section { position: relative; overflow: hidden; }
-        .glow-section::before {
-            content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle at 25% 50%, rgba(45,106,79,0.12) 0%, transparent 50%);
-            pointer-events: none;
+        .motion-scan {
+            background: linear-gradient(90deg, transparent, rgba(236,72,153,0.2), rgba(249,115,22,0.14), transparent);
+            animation: scan-pass 5.5s ease-in-out infinite;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .motion-card {
+            transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+        }
+        .motion-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(236,72,153,0.5);
+            box-shadow: 0 24px 80px rgba(236,72,153,0.08);
+        }
+        .live-workflow {
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+                #0f0f0f;
+        }
+        .workflow-step {
+            opacity: 0.46;
+            animation: workflow-pulse 6s ease-in-out infinite;
+        }
+        .workflow-step:nth-child(2) { animation-delay: 1s; }
+        .workflow-step:nth-child(3) { animation-delay: 2s; }
+        .workflow-step:nth-child(4) { animation-delay: 3s; }
+        .workflow-line::before {
+            content: "";
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 35%;
+            background: linear-gradient(90deg, transparent, #ec4899, #f97316, transparent);
+            animation: line-flow 3.8s ease-in-out infinite;
+        }
+        .stack-marquee {
+            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+        }
+        .stack-track {
+            width: max-content;
+            animation: stack-marquee 30s linear infinite;
+        }
+        .stack-marquee:hover .stack-track { animation-play-state: paused; }
+        @keyframes grid-drift {
+            from { background-position: 0 0, 0 0; }
+            to { background-position: 56px 56px, 56px 56px; }
+        }
+        @keyframes scan-pass {
+            0%, 100% { transform: translateX(-65%); opacity: 0; }
+            20%, 60% { opacity: 1; }
+            80% { transform: translateX(65%); opacity: 0; }
+        }
+        @keyframes workflow-pulse {
+            0%, 100% { opacity: 0.42; transform: translateX(0); }
+            18%, 34% { opacity: 1; transform: translateX(4px); }
+        }
+        @keyframes line-flow {
+            0% { transform: translateX(-110%); opacity: 0; }
+            20%, 70% { opacity: 1; }
+            100% { transform: translateX(300%); opacity: 0; }
+        }
+        @keyframes stack-marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+        .faq-item.open .faq-answer { max-height: 260px; }
+        .faq-item.open .faq-plus { transform: rotate(45deg); }
+        .faq-plus { transition: transform 0.2s ease; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+            .reveal-on-scroll { opacity: 1; transform: none; }
         }
     </style>
 </head>
-<body class="bg-ivory-50 text-ink font-sans antialiased">
-    <!-- Header -->
-    <header class="fixed inset-x-0 top-0 z-50 bg-ivory-50/90 backdrop-blur-md border-b border-ivory-200">
-        <div class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
-            <a href="#" class="flex items-center gap-2.5 text-lg font-bold tracking-tight text-ink">
-                <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#2d6a4f"/><text x="16" y="22" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="14" fill="white">GR</text></svg>
-                Grand River AI
+<body class="bg-[#0a0a0a] text-white font-sans antialiased selection:bg-rose/30 selection:text-white">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-carbon/88 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+            <a href="#" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-white" aria-label="Grand River AI home">
+                <span class="flex h-7 w-7 items-center justify-center rounded-md border border-line bg-white/[0.03] text-xs font-bold text-gradient">AI</span>
+                <span>Grand River <span class="text-rose">AI</span></span>
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
-                <a href="#services" class="hover:text-ink transition-colors">Services</a>
-                <a href="#results" class="hover:text-ink transition-colors">Results</a>
-                <a href="#about" class="hover:text-ink transition-colors">About</a>
-                <a href="#contact" class="hover:text-ink transition-colors">Contact</a>
-                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-sage px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sage-dark transition-colors active:scale-[0.98]">Book Free Call</a>
+            <nav class="hidden items-center gap-7 text-xs font-medium text-soft md:flex">
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#work" class="hover:text-white transition-colors">Work</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta rounded-lg px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-rose/15 transition-transform active:scale-[0.98]">Book a call</a>
             </nav>
-            <button id="mobileMenuBtn" class="md:hidden p-2 -mr-2 text-ink" aria-label="Toggle menu">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button id="mobileMenuBtn" class="md:hidden -mr-2 rounded-lg p-2 text-white" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
             </button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden border-t border-ivory-200 bg-ivory-50">
-            <nav class="flex flex-col px-5 py-4 gap-1">
-                <a href="#services" class="py-3 text-base font-medium text-muted hover:text-ink transition-colors">Services</a>
-                <a href="#results" class="py-3 text-base font-medium text-muted hover:text-ink transition-colors">Results</a>
-                <a href="#about" class="py-3 text-base font-medium text-muted hover:text-ink transition-colors">About</a>
-                <a href="#contact" class="py-3 text-base font-medium text-muted hover:text-ink transition-colors">Contact</a>
-                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="mt-2 inline-flex items-center justify-center rounded-full bg-sage px-6 py-3 text-base font-semibold text-white hover:bg-sage-dark transition-colors">Book Free Call</a>
+        <div id="mobileMenu" class="hidden border-t border-line bg-carbon md:hidden">
+            <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4 text-sm text-soft">
+                <a href="#services" class="py-3 hover:text-white">Services</a>
+                <a href="#work" class="py-3 hover:text-white">Work</a>
+                <a href="#about" class="py-3 hover:text-white">About</a>
+                <a href="#faq" class="py-3 hover:text-white">FAQ</a>
+                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta mt-2 rounded-lg px-5 py-3 text-center font-bold text-white">Book a call</a>
             </nav>
         </div>
     </header>
 
     <main>
-    <!-- Hero -->
-    <section class="relative overflow-hidden noise-overlay">
-        <div class="max-w-6xl mx-auto px-5 pt-20 pb-24 md:pt-28 md:pb-32">
-            <div class="max-w-2xl">
-                <div class="hero-anim inline-flex items-center gap-2 rounded-full border border-ivory-300 bg-white px-4 py-1.5 text-xs font-medium text-muted mb-8">
-                    <span class="h-1.5 w-1.5 rounded-full bg-sage"></span>
-                    Limited pilot spots this month
+        <section class="relative overflow-hidden border-b border-line">
+            <div class="motion-grid absolute inset-0 opacity-70" aria-hidden="true"></div>
+            <div class="motion-scan absolute left-0 top-24 h-px w-full" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-6xl px-5 pb-24 pt-32 text-center md:pb-32 md:pt-36">
+                <div class="reveal-on-scroll is-visible inline-flex items-center gap-2 rounded-full border border-line bg-white/[0.03] px-4 py-2 text-xs text-soft">
+                    <span class="h-2 w-2 rounded-full bg-rose"></span>
+                    Based in Ontario · Shipping AI systems for local businesses
                 </div>
-                <h1 class="hero-anim hero-d1 text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-ink">
-                    AI Automation for Paris, Ontario <span class="text-muted">&</span> the KWC Region
+                <h1 class="reveal-on-scroll is-visible mx-auto mt-8 max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-normal text-white md:text-7xl">
+                    AI automation that ships.<br>
+                    <span class="text-zinc-400">Not just advice.</span>
                 </h1>
-                <p class="hero-anim hero-d2 mt-6 text-lg text-muted leading-relaxed max-w-[55ch]">
-                    Stop wasting hours on repetitive tasks. We build AI systems that handle customer inquiries, automate your workflows, and free you up to grow your business.
+                <p class="reveal-on-scroll is-visible mx-auto mt-7 max-w-2xl text-base leading-8 text-soft md:text-lg">
+                    Grand River AI builds Production AI systems: agents, automations, dashboards, and LLM integrations that handle real business work for teams in Paris, Brantford, Kitchener-Waterloo-Cambridge, and beyond.
                 </p>
-                <div class="hero-anim hero-d3 mt-8 flex flex-col sm:flex-row items-start gap-4">
-                    <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-sage px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-sage/20 hover:bg-sage-dark transition-all active:scale-[0.98]">
-                        Book Your Free Discovery Call
-                        <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <div class="reveal-on-scroll is-visible mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                    <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta inline-flex min-h-12 items-center justify-center rounded-xl px-7 text-sm font-bold text-white shadow-2xl shadow-rose/20 transition-transform active:scale-[0.98]">
+                        Start a project
+                        <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
                     </a>
-                    <a href="#process" class="inline-flex items-center text-sm font-medium text-muted hover:text-ink transition-colors">
-                        See How It Works
-                        <svg class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <a href="#services" class="inline-flex min-h-12 items-center justify-center rounded-xl px-4 text-sm font-medium text-white hover:text-rose transition-colors">
+                        See services
+                        <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
                     </a>
                 </div>
-            </div>
-            <!-- Trust Bar -->
-            <div class="mt-16 grid grid-cols-3 gap-6 max-w-lg">
-                <div class="border-t border-ivory-300 pt-4">
-                    <p class="text-2xl font-bold text-ink">12+</p>
-                    <p class="text-xs text-muted mt-1">Local Businesses</p>
-                </div>
-                <div class="border-t border-ivory-300 pt-4">
-                    <p class="text-2xl font-bold text-ink">100+</p>
-                    <p class="text-xs text-muted mt-1">Hours Saved Weekly</p>
-                </div>
-                <div class="border-t border-ivory-300 pt-4">
-                    <p class="text-2xl font-bold text-ink">3 wk</p>
-                    <p class="text-xs text-muted mt-1">Avg. Payback</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services -->
-    <section id="services" class="reveal border-t border-ivory-200 bg-white">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <div class="max-w-xl">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">AI Solutions That Save You Time</h2>
-                <p class="mt-4 text-muted leading-relaxed">From chatbots to workflow automation, we build systems that work 24/7 so you don't have to.</p>
-            </div>
-            <div class="mt-12 grid md:grid-cols-2 gap-6">
-                <!-- Service 1 -->
-                <div class="svc-card group rounded-[1.5rem] border border-ivory-200 bg-ivory-50 p-8 hover:border-sage/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sage/10 text-sage">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
-                    </div>
-                    <h3 class="mt-5 text-lg font-semibold">AI Chatbots and Customer Service</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">24/7 inquiry handling for HVAC, dental, and retail businesses. Never miss a lead again, even when you're closed.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="svc-card group rounded-[1.5rem] border border-ivory-200 bg-ivory-50 p-8 hover:border-sage/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sage/10 text-sage">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </div>
-                    <h3 class="mt-5 text-lg font-semibold">Process Automation</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">Automate invoicing, scheduling, and CRM workflows. Perfect for trades and service businesses looking to cut admin time.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="svc-card group rounded-[1.5rem] border border-ivory-200 bg-ivory-50 p-8 hover:border-sage/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sage/10 text-sage">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
-                    </div>
-                    <h3 class="mt-5 text-lg font-semibold">Lead Capture and Follow-up</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">Auto-reply, Calendly booking integration, and automated reminders. Turn inquiries into booked appointments automatically.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="svc-card group rounded-[1.5rem] border border-ivory-200 bg-ivory-50 p-8 hover:border-sage/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sage/10 text-sage">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
-                    </div>
-                    <h3 class="mt-5 text-lg font-semibold">Reporting Dashboards</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">Track sales trends, KPIs, and business metrics. Real-time dashboards for restaurants and retail businesses.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="results" class="reveal border-t border-ivory-200">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Results Local Businesses Are Seeing</h2>
-            <p class="mt-3 text-muted">Real feedback from clients in Paris, Brantford, and Kitchener.</p>
-            <div class="mt-12 grid md:grid-cols-3 gap-6">
-                <!-- Testimonial 1 -->
-                <div class="rounded-[1.5rem] border border-ivory-200 bg-white p-8">
-                    <div class="flex gap-0.5 text-sage">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    </div>
-                    <blockquote class="mt-5 text-sm leading-relaxed text-ink">"Hiren set up automated booking for our HVAC company. We went from missing 30% of calls to catching every lead. Saved us hiring a receptionist."</blockquote>
-                    <div class="mt-5 pt-5 border-t border-ivory-200">
-                        <p class="text-sm font-semibold text-ink">Mike R.</p>
-                        <p class="text-xs text-muted mt-0.5">Paris Home Services, Paris ON</p>
-                    </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="rounded-[1.5rem] border border-ivory-200 bg-white p-8">
-                    <div class="flex gap-0.5 text-sage">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    </div>
-                    <blockquote class="mt-5 text-sm leading-relaxed text-ink">"Our inventory was a mess. Grand River AI built a simple system that tracks what we sell and auto-generates purchase orders. Cut my admin by half."</blockquote>
-                    <div class="mt-5 pt-5 border-t border-ivory-200">
-                        <p class="text-sm font-semibold text-ink">Sarah K.</p>
-                        <p class="text-xs text-muted mt-0.5">Wilson's Hardware, Brantford ON</p>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="rounded-[1.5rem] border border-ivory-200 bg-white p-8">
-                    <div class="flex gap-0.5 text-sage">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    </div>
-                    <blockquote class="mt-5 text-sm leading-relaxed text-ink">"The chatbot handles after-hours inquiries and books appointments while we're closed. Best ROI on any tech investment we've made."</blockquote>
-                    <div class="mt-5 pt-5 border-t border-ivory-200">
-                        <p class="text-sm font-semibold text-ink">David P.</p>
-                        <p class="text-xs text-muted mt-0.5">Grand River Dental, Kitchener ON</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study -->
-    <section class="glow-section border-t border-ivory-200 bg-ink text-white">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <div class="max-w-xl">
-                <p class="text-xs font-medium uppercase tracking-widest text-white/50">Case Study</p>
-                <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">Paris, Ontario HVAC and Plumbing Company</h2>
-                <p class="mt-4 text-white/60 leading-relaxed">A local HVAC and plumbing company was losing 30% of potential customers due to slow response times. We implemented a custom chatbot that handles inquiries 24/7, qualifies leads, and books appointments directly into their calendar.</p>
-            </div>
-            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="border-t border-white/20 pt-5">
-                    <p class="text-3xl font-bold">-83%</p>
-                    <p class="text-xs text-white/50 mt-2">Lead response time<br>(6h to 40 min)</p>
-                </div>
-                <div class="border-t border-white/20 pt-5">
-                    <p class="text-3xl font-bold">+28%</p>
-                    <p class="text-xs text-white/50 mt-2">Booked consultations</p>
-                </div>
-                <div class="border-t border-white/20 pt-5">
-                    <p class="text-3xl font-bold">12 hrs</p>
-                    <p class="text-xs text-white/50 mt-2">Saved per week</p>
-                </div>
-                <div class="border-t border-white/20 pt-5">
-                    <p class="text-3xl font-bold">3 wks</p>
-                    <p class="text-xs text-white/50 mt-2">Payback period</p>
-                </div>
-            </div>
-            <div class="mt-10">
-                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-white/90 transition-colors active:scale-[0.98]">Book a Free Discovery Call</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="reveal border-t border-ivory-200 bg-white">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <div class="grid md:grid-cols-2 gap-16 items-start">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Hi, I'm Hiren</h2>
-                    <p class="mt-5 text-muted leading-relaxed">I'm an AI consultant based in Paris, Ontario, focused on helping local businesses in the KWC region save time and grow through intelligent automation.</p>
-                    <p class="mt-4 text-muted leading-relaxed">After seeing countless small businesses struggle with repetitive tasks that eat up their days, I decided to specialize in making AI accessible and practical. Local businesses deserve the same automation advantages as big corporations without the complexity or cost.</p>
-                </div>
-                <div>
-                    <!-- Photo placeholder -->
-                    <div class="aspect-[4/3] rounded-[1.5rem] bg-gradient-to-br from-sage/5 to-ivory-100 border border-ivory-200 flex items-center justify-center overflow-hidden relative">
-                        <div class="absolute inset-0 opacity-10">
-                            <svg class="w-full h-full" viewBox="0 0 400 300" fill="none"><circle cx="200" cy="150" r="80" fill="#2d6a4f" opacity="0.15"/><circle cx="200" cy="150" r="50" fill="#2d6a4f" opacity="0.1"/></svg>
+                <div class="live-workflow reveal-on-scroll is-visible mx-auto mt-14 max-w-3xl overflow-hidden rounded-lg border border-line p-4 text-left shadow-2xl shadow-black/30">
+                    <div class="flex items-center justify-between gap-4 border-b border-line pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="h-2 w-2 rounded-full bg-rose"></span>
+                            <span class="text-xs font-semibold text-white">Live automation run</span>
                         </div>
-                        <div class="text-center relative z-10 px-6">
-                            <div class="w-20 h-20 mx-auto rounded-full bg-sage/10 flex items-center justify-center mb-3">
-                                <svg class="w-10 h-10 text-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+                        <span class="rounded-full border border-line px-2.5 py-1 text-[11px] text-dim">00:14 processing</span>
+                    </div>
+                    <div class="relative mt-4">
+                        <div class="workflow-line absolute left-[15px] top-5 h-[calc(100%-2.5rem)] w-px overflow-hidden bg-line" aria-hidden="true"></div>
+                        <div class="space-y-3">
+                            <div class="workflow-step relative flex gap-3 rounded-md border border-line/80 bg-black/20 p-3">
+                                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-rose shadow-[0_0_18px_rgba(236,72,153,0.8)]"></span>
+                                <div>
+                                    <p class="text-xs font-semibold text-white">New lead received</p>
+                                    <p class="mt-1 text-xs text-dim">Website inquiry from Brantford service area</p>
+                                </div>
                             </div>
-                            <p class="text-xs text-muted">Add your photo here</p>
+                            <div class="workflow-step relative flex gap-3 rounded-md border border-line/80 bg-black/20 p-3">
+                                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-rose shadow-[0_0_18px_rgba(236,72,153,0.8)]"></span>
+                                <div>
+                                    <p class="text-xs font-semibold text-white">AI qualifies urgency</p>
+                                    <p class="mt-1 text-xs text-dim">Intent, location, budget, timeline, next step</p>
+                                </div>
+                            </div>
+                            <div class="workflow-step relative flex gap-3 rounded-md border border-line/80 bg-black/20 p-3">
+                                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-rose shadow-[0_0_18px_rgba(236,72,153,0.8)]"></span>
+                                <div>
+                                    <p class="text-xs font-semibold text-white">Calendar + CRM updated</p>
+                                    <p class="mt-1 text-xs text-dim">Booked call, sent summary, queued follow-up</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 h-1.5 w-1.5 rounded-full bg-sage flex-shrink-0"></div>
-                            <p class="text-sm text-muted"><strong class="text-ink">Tailored roadmaps</strong> that honor your existing tools and workflows</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 h-1.5 w-1.5 rounded-full bg-sage flex-shrink-0"></div>
-                            <p class="text-sm text-muted"><strong class="text-ink">Transparent pricing</strong> with clear scope, no hidden fees</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 h-1.5 w-1.5 rounded-full bg-sage flex-shrink-0"></div>
-                            <p class="text-sm text-muted"><strong class="text-ink">Local support</strong> based right here in Paris, Ontario</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 h-1.5 w-1.5 rounded-full bg-sage flex-shrink-0"></div>
-                            <p class="text-sm text-muted"><strong class="text-ink">Privacy-first</strong> with NDAs available. Your data stays yours.</p>
+                </div>
+
+                <div class="reveal-on-scroll is-visible mx-auto mt-16 max-w-3xl">
+                    <p class="text-xs text-dim">Building with</p>
+                    <div class="stack-marquee mt-5 overflow-hidden">
+                        <div class="stack-track flex gap-3 pr-3">
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">OpenAI API</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Claude</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">RAG</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">AI Agents</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Next.js</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Python</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Supabase</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Zapier</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Calendly</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">OpenAI API</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Claude</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">RAG</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">AI Agents</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Next.js</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Python</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Supabase</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Zapier</span>
+                            <span class="rounded-full border border-line px-4 py-2 text-xs text-soft">Calendly</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Process -->
-    <section id="process" class="reveal border-t border-ivory-200">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">How It Works</h2>
-            <p class="mt-3 text-muted">Three steps to start saving time with AI.</p>
-            <div class="mt-12 grid md:grid-cols-3 gap-12">
+        <section id="services" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
+                <div class="mx-auto max-w-2xl text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">What we build</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl">AI services that end in shipped software.</h2>
+                    <p class="mt-5 text-base leading-7 text-soft">No slide decks as the deliverable. We scope, build, connect, deploy, and refine production-ready AI workflows.</p>
+                </div>
+
+                <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-rose">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6m-7 8 3-3h8a4 4 0 0 0 4-4V8a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v5a4 4 0 0 0 4 4"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">AI Agents & Chatbots</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Lead response, customer support, intake, qualification, and appointment booking across web, email, SMS, and chat.</p>
+                        <span class="mt-5 inline-flex rounded-full border border-line px-3 py-1 text-xs text-dim">Most popular</span>
+                    </article>
+
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-rose">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">AI Automations</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Automate repetitive work: inbox triage, data extraction, CRM updates, invoice routing, reporting, and follow-up.</p>
+                    </article>
+
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-rose">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Zm4 10V9m4 7v-4m4 4V7"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">Dashboards & Internal Tools</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Operational tools that connect business data, summarize what matters, and make daily decisions easier.</p>
+                    </article>
+
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-rose">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M5 5l14 14M19 5 5 19"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">LLM Integration</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Connect OpenAI, Claude, RAG, vector search, structured outputs, and prompt pipelines to your existing product.</p>
+                    </article>
+
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-rose">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19V5m0 0h16l-3 5 3 5H4"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">AI Strategy</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Workflow audits that identify the highest-ROI automation opportunities and turn them into buildable scopes.</p>
+                    </article>
+
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-rose">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v5m0 8v5M3 12h5m8 0h5m-3.5-6.5L14 9m-4 6-3.5 3.5m0-13L10 9m4 6 3.5 3.5"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">MVP in 2 Weeks</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Fast pilot builds for teams that need a real AI workflow in production, not a six-month transformation program.</p>
+                        <span class="mt-5 inline-flex rounded-full border border-line px-3 py-1 text-xs text-dim">Fastest path</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
+                <div class="mx-auto max-w-2xl text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Proof</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl">Shipped systems, measurable wins.</h2>
+                    <p class="mt-5 text-base leading-7 text-soft">We frame work around deployed systems, operational lift, and the business metric the AI is supposed to move.</p>
+                </div>
+
+                <div class="mt-12 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-7">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <h3 class="text-xl font-bold text-white">After-hours lead response agent</h3>
+                            <span class="rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-3 py-1 text-xs font-bold text-white">Live workflow</span>
+                        </div>
+                        <p class="mt-5 max-w-2xl text-sm leading-7 text-soft">A local services workflow that catches missed inquiries, qualifies urgency, sends structured summaries, and routes prospects into a booking flow while the team is off the clock.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Calendly</span>
+                            <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Email</span>
+                            <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">LLM APIs</span>
+                            <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">CRM handoff</span>
+                        </div>
+                        <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="mt-7 inline-flex text-sm font-semibold text-white hover:text-rose">Build something like this →</a>
+                    </article>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6 text-center">
+                            <p class="text-3xl font-extrabold text-rose" data-count-to="12" data-count-suffix="h">12h</p>
+                            <p class="mt-2 text-xs leading-5 text-soft">admin saved weekly</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6 text-center">
+                            <p class="text-3xl font-extrabold text-rose" data-count-to="24" data-count-suffix="/7">24/7</p>
+                            <p class="mt-2 text-xs leading-5 text-soft">lead capture</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6 text-center">
+                            <p class="text-3xl font-extrabold text-rose" data-count-to="3" data-count-suffix="wk">3wk</p>
+                            <p class="mt-2 text-xs leading-5 text-soft">average payback</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6 text-center">
+                            <p class="text-3xl font-extrabold text-rose">KWC</p>
+                            <p class="mt-2 text-xs leading-5 text-soft">local support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 grid gap-4 md:grid-cols-3">
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-base font-bold text-white">Customer support assistant</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Knowledge-base answers, escalation rules, and capture of every unanswered question for continuous improvement.</p>
+                    </article>
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-base font-bold text-white">Reporting command center</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Weekly KPI summaries, anomaly flags, and plain-English insight from the tools the business already uses.</p>
+                    </article>
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-base font-bold text-white">Intake and follow-up flow</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Structured lead capture, auto-replies, reminders, and handoff notes for service teams and clinics.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:grid-cols-[0.9fr_1.1fr] md:py-28">
                 <div>
-                    <p class="text-5xl font-bold text-ivory-300">1</p>
-                    <h3 class="mt-4 text-lg font-semibold">Free Discovery</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">30-minute call to understand your business, identify automation opportunities, and determine if we're a good fit.</p>
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Who's behind this</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl">Builder first. Consultant second.</h2>
                 </div>
-                <div>
-                    <p class="text-5xl font-bold text-ivory-300">2</p>
-                    <h3 class="mt-4 text-lg font-semibold">Pilot and Launch</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">We build and implement a focused automation pilot. Most clients are up and running within 1-2 weeks.</p>
-                </div>
-                <div>
-                    <p class="text-5xl font-bold text-ivory-300">3</p>
-                    <h3 class="mt-4 text-lg font-semibold">Measure and Improve</h3>
-                    <p class="mt-2 text-sm text-muted leading-relaxed">Track results, refine the automation, and expand to other areas of your business as you see wins.</p>
+                <div class="motion-card reveal-on-scroll rounded-lg border border-line p-7">
+                    <h3 class="text-2xl font-bold text-white">Hiren Thakore</h3>
+                    <p class="mt-2 text-sm text-dim">Founder & AI Engineer · Paris, Ontario</p>
+                    <p class="mt-6 text-base leading-8 text-soft">I build and deploy AI products for real business workflows. Grand River AI exists for teams that want practical systems: agents, automations, internal tools, and LLM integrations that make it into production.</p>
+                    <p class="mt-4 text-base leading-8 text-soft">Local businesses deserve the same leverage as larger teams without buying a pile of tools they cannot maintain. The work starts with a concrete workflow and ends with software your team can use.</p>
+                    <div class="mt-7 flex flex-wrap gap-2">
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Full-stack engineering</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">AI agent design</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">LLM production deployments</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Workflow automation</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Ontario based</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service Area -->
-    <section class="border-t border-ivory-200 bg-white">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Serving Businesses Across the KWC Region</h2>
-            <p class="mt-3 text-muted">From Paris to Kitchener-Waterloo-Cambridge, we help local businesses work smarter.</p>
-            <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
-                <div class="border-t border-ivory-200 pt-4">
-                    <h3 class="font-semibold">Paris, Ontario</h3>
-                    <p class="mt-1 text-sm text-muted">Our home base. Full-service AI automation for Paris businesses, from chatbots for local retail to process automation for service companies.</p>
+        <section id="process" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
+                <div class="grid gap-10 md:grid-cols-[0.85fr_1.15fr]">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">How it works</p>
+                        <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl">From messy workflow to deployed AI system.</h2>
+                    </div>
+                    <div class="grid gap-4">
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6">
+                            <p class="text-sm font-bold text-rose">01</p>
+                            <h3 class="mt-3 text-lg font-semibold text-white">Find the workflow worth automating</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">We map the repetitive, slow, or leaky process and define the business outcome before writing code.</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6">
+                            <p class="text-sm font-bold text-rose">02</p>
+                            <h3 class="mt-3 text-lg font-semibold text-white">Build the pilot</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">We connect the model, data, tools, guardrails, and handoff points into a working production pilot.</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6">
+                            <p class="text-sm font-bold text-rose">03</p>
+                            <h3 class="mt-3 text-lg font-semibold text-white">Measure, refine, expand</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">We watch the first outcomes, improve reliability, and expand only where the numbers justify it.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="border-t border-ivory-200 pt-4">
-                    <h3 class="font-semibold">Brantford</h3>
-                    <p class="mt-1 text-sm text-muted">Automating customer service, lead capture, and back-office workflows for Brantford dentists, HVAC companies, and retailers.</p>
-                </div>
-                <div class="border-t border-ivory-200 pt-4">
-                    <h3 class="font-semibold">Brant County</h3>
-                    <p class="mt-1 text-sm text-muted">Rural businesses deserve automation too. We work with farms, rural retail, and service businesses across the county.</p>
-                </div>
-                <div class="border-t border-ivory-200 pt-4">
-                    <h3 class="font-semibold">Kitchener</h3>
-                    <p class="mt-1 text-sm text-muted">AI chatbots, appointment automation, and reporting dashboards for Kitchener's growing business community.</p>
-                </div>
-                <div class="border-t border-ivory-200 pt-4">
-                    <h3 class="font-semibold">Waterloo</h3>
-                    <p class="mt-1 text-sm text-muted">From startups to established businesses, lead capture, CRM integration, and workflow automation for Waterloo companies.</p>
-                </div>
-                <div class="border-t border-ivory-200 pt-4">
-                    <h3 class="font-semibold">Cambridge</h3>
-                    <p class="mt-1 text-sm text-muted">Automated booking systems, inventory management, and customer follow-up that converts leads to customers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact CTA -->
-    <section id="contact" class="reveal border-t border-ivory-200">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-            <div class="max-w-xl">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Ready to Automate Your Business?</h2>
-                <p class="mt-4 text-muted leading-relaxed">Book a free 30-minute discovery call. No pressure, no obligation, just practical advice on how AI can work for you.</p>
-            </div>
-            <div class="hero-anim hero-d3 mt-8 flex flex-col sm:flex-row items-start gap-4">
-                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-sage px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-sage/20 hover:bg-sage-dark transition-all active:scale-[0.98]">
-                    Book Free Discovery Call
-                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-                <div class="flex items-center gap-6 text-sm text-muted">
-                    <a href="tel:+12269759417" class="flex items-center gap-2 hover:text-ink transition-colors">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
-                        (226) 975-9417
-                    </a>
-                    <a href="mailto:hello@grandriverai.ca" class="flex items-center gap-2 hover:text-ink transition-colors">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                        hello@grandriverai.ca
-                    </a>
+                <div class="mt-16 border-t border-line pt-10">
+                    <h3 class="text-xl font-bold text-white">Serving Ontario businesses locally and remotely</h3>
+                    <p class="mt-3 max-w-3xl text-sm leading-7 text-soft">Grand River AI is based in Paris, Ontario and works with businesses across Brantford, Brant County, Kitchener, Waterloo, Cambridge, and the broader KWC region. Remote delivery is available for teams outside Ontario.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Paris, Ontario</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Brantford</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Brant County</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Kitchener</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Waterloo</span>
+                        <span class="rounded-full border border-line px-3 py-1.5 text-xs text-soft">Cambridge</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="reveal border-t border-ivory-200 bg-white">
-        <div class="max-w-3xl mx-auto px-5 py-20 md:py-28">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Frequently Asked Questions</h2>
-            <div class="mt-10 divide-y divide-ivory-200">
-                <div class="faq-item py-5 cursor-pointer" onclick="this.classList.toggle('open')">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium text-ink pr-4">How long does it take to see results?</p>
-                        <svg class="faq-chevron w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </div>
-                    <div class="faq-answer"><p class="mt-3 text-sm text-muted leading-relaxed">Most clients see measurable results within the first 3 weeks. Our typical payback period is 3 weeks, and clients often report saving 10+ hours per week within the first month.</p></div>
+        <section id="faq" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto max-w-3xl px-5 py-20 md:py-28">
+                <div class="text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Common questions</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl">No black-box AI mystery.</h2>
                 </div>
-                <div class="faq-item py-5 cursor-pointer" onclick="this.classList.toggle('open')">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium text-ink pr-4">What's included in the free discovery call?</p>
-                        <svg class="faq-chevron w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <div class="mt-10 space-y-3">
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">What makes this different from AI consulting?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">The deliverable is working software. Strategy is useful only when it leads to a scoped, deployed system your team can test in the real workflow.</p></div>
                     </div>
-                    <div class="faq-answer"><p class="mt-3 text-sm text-muted leading-relaxed">We spend 30 minutes reviewing your current processes, identifying automation opportunities, and determining if there's a good fit. There's no obligation and you'll leave with actionable insights regardless.</p></div>
-                </div>
-                <div class="faq-item py-5 cursor-pointer" onclick="this.classList.toggle('open')">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium text-ink pr-4">Do I need technical expertise to maintain the automations?</p>
-                        <svg class="faq-chevron w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">How fast can we launch?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">Focused pilots can often launch in one to three weeks. Larger internal tools or product integrations depend on data access, approvals, and integration complexity.</p></div>
                     </div>
-                    <div class="faq-answer"><p class="mt-3 text-sm text-muted leading-relaxed">No. We build solutions that are easy to manage without technical knowledge. We also provide training and documentation so your team can make simple updates on their own.</p></div>
-                </div>
-                <div class="faq-item py-5 cursor-pointer" onclick="this.classList.toggle('open')">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium text-ink pr-4">Do you work with trades companies?</p>
-                        <svg class="faq-chevron w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">Do we need technical staff?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">No. We design the system around your existing workflow and provide training, documentation, and support so your team understands how to use it.</p></div>
                     </div>
-                    <div class="faq-answer"><p class="mt-3 text-sm text-muted leading-relaxed">Yes, we specialize in working with trades businesses including HVAC, plumbing, electrical, and contracting companies. We understand the unique challenges of service-based trades.</p></div>
-                </div>
-                <div class="faq-item py-5 cursor-pointer" onclick="this.classList.toggle('open')">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium text-ink pr-4">What tools do you integrate with?</p>
-                        <svg class="faq-chevron w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">What tools do you integrate with?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">Common integrations include Google Workspace, Gmail, Calendly, Slack, HubSpot, QuickBooks, spreadsheets, custom databases, APIs, and web apps.</p></div>
                     </div>
-                    <div class="faq-answer"><p class="mt-3 text-sm text-muted leading-relaxed">We integrate with popular tools including Calendly, Google Calendar, Gmail, HubSpot, Salesforce, Mailchimp, QuickBooks, Slack, and many more.</p></div>
-                </div>
-                <div class="faq-item py-5 cursor-pointer" onclick="this.classList.toggle('open')">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium text-ink pr-4">How is this different from hiring an IT person?</p>
-                        <svg class="faq-chevron w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">Can you work with our existing team?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">Yes. We can build independently, pair with your internal team, or provide implementation support for an existing product roadmap.</p></div>
                     </div>
-                    <div class="faq-answer"><p class="mt-3 text-sm text-muted leading-relaxed">An IT person typically focuses on maintaining existing systems. We specialize specifically in AI automation and implement new solutions that save you time and grow your business. It's a focused engagement rather than an ongoing salary.</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contact" class="scroll-mt-24">
+            <div class="mx-auto max-w-4xl px-5 py-20 text-center md:py-28">
+                <h2 class="text-4xl font-extrabold tracking-normal text-white md:text-6xl">Have an AI project?</h2>
+                <p class="mx-auto mt-5 max-w-xl text-base leading-7 text-soft">Tell us what you are trying to automate or build. If it is a fit, we move fast.</p>
+                <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                    <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta inline-flex min-h-12 items-center justify-center rounded-xl px-7 text-sm font-bold text-white shadow-2xl shadow-rose/20 transition-transform active:scale-[0.98]">Book a discovery call →</a>
+                    <a href="mailto:hello@grandriverai.ca" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-line px-7 text-sm font-bold text-white hover:border-rose/70 transition-colors">hello@grandriverai.ca</a>
+                </div>
+                <p class="mt-6 text-xs text-dim">Response within 24h · Practical scope · No pitch decks required</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-ivory-200 bg-white">
-        <div class="max-w-6xl mx-auto px-5 py-12">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center gap-2"><svg class="w-6 h-6" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#2d6a4f"/><text x="16" y="22" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="14" fill="white">GR</text></svg><p class="font-bold text-ink">Grand River AI</p></div>
-                    <p class="mt-2 text-sm text-muted">AI automation consulting for businesses in Paris, Ontario and the KWC region.</p>
-                </div>
-                <div>
-                    <p class="text-sm font-semibold text-ink">Service Areas</p>
-                    <div class="mt-2 grid grid-cols-2 gap-1 text-sm text-muted">
-                        <span>Paris, Ontario</span><span>Brantford</span><span>Brant County</span><span>Kitchener</span><span>Waterloo</span><span>Cambridge</span>
-                    </div>
-                </div>
-                <div>
-                    <p class="text-sm font-semibold text-ink">Contact</p>
-                    <div class="mt-2 space-y-1 text-sm text-muted">
-                        <a href="tel:+12269759417" class="block hover:text-ink transition-colors">(226) 975-9417</a>
-                        <a href="mailto:hello@grandriverai.ca" class="block hover:text-ink transition-colors">hello@grandriverai.ca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-10 pt-6 border-t border-ivory-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted">
-                <p>2026 Grand River AI. All rights reserved.</p>
-                <div class="flex gap-4">
-                    <span>Privacy Policy</span>
-                    <span>Terms of Service</span>
-                </div>
+    <footer class="border-t border-line pb-24 md:pb-0">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-5 py-10 text-xs text-dim sm:flex-row">
+            <p>© 2026 Grand River AI</p>
+            <div class="flex flex-wrap items-center justify-center gap-5">
+                <a href="tel:+12269759417" class="hover:text-white">(226) 975-9417</a>
+                <a href="mailto:hello@grandriverai.ca" class="hover:text-white">hello@grandriverai.ca</a>
+                <a href="#services" class="hover:text-white">Services</a>
+                <a href="#contact" class="hover:text-white">Contact</a>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA -->
-    <div class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-ivory-200 p-3 md:hidden">
-        <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="flex items-center justify-center rounded-full bg-sage py-3 text-sm font-semibold text-white shadow-lg shadow-sage/20 active:scale-[0.98]">Book Free Call</a>
+    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-carbon/95 p-3 backdrop-blur-md md:hidden">
+        <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta flex min-h-12 items-center justify-center rounded-xl text-sm font-bold text-white shadow-lg shadow-rose/20">Book a call</a>
     </div>
 
-    <!-- JSON-LD Schemas -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Grand River AI",
-        "description": "AI automation consulting for businesses in Paris, Ontario and the KWC region",
+        "description": "Production AI systems, AI agents, automations, dashboards, and LLM integrations for businesses in Paris, Brantford, Brant County, Kitchener, Waterloo, and Cambridge.",
         "url": "https://grandriverai.ca/",
         "telephone": "+1-226-975-9417",
         "email": "hello@grandriverai.ca",
@@ -529,48 +543,140 @@
     }
     </script>
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Service", "serviceType": "AI Chatbots and Customer Service", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "24/7 AI chatbots that handle customer inquiries for HVAC, dental, and retail businesses" }
+    { "@context": "https://schema.org", "@type": "Service", "serviceType": "AI Agents and Chatbots", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "AI agents and chatbots for lead response, customer support, intake, qualification, and appointment booking." }
     </script>
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Service", "serviceType": "Process Automation", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "Automate invoicing, scheduling, and CRM workflows for trades and service businesses" }
+    { "@context": "https://schema.org", "@type": "Service", "serviceType": "AI Automations", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "AI automations for inbox triage, data extraction, CRM updates, invoice routing, reporting, and follow-up." }
     </script>
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Service", "serviceType": "Lead Capture and Follow-up", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "Auto-reply, Calendly booking, and automated reminders for local businesses" }
-    </script>
-    <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Service", "serviceType": "Reporting Dashboards", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "Sales trends, KPIs, and reporting dashboards for restaurants and retail" }
+    { "@context": "https://schema.org", "@type": "Service", "serviceType": "LLM Integration", "provider": { "@type": "LocalBusiness", "name": "Grand River AI" }, "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"], "description": "OpenAI, Claude, RAG, structured outputs, and prompt pipeline integrations for existing products and workflows." }
     </script>
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-        { "@type": "Question", "name": "How long does it take to see results from AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "Most clients see measurable results within the first 3 weeks. Our typical payback period is 3 weeks." } },
-        { "@type": "Question", "name": "What's included in the free discovery call?", "acceptedAnswer": { "@type": "Answer", "text": "We spend 30 minutes reviewing your current processes and identifying automation opportunities." } },
-        { "@type": "Question", "name": "Do I need technical expertise?", "acceptedAnswer": { "@type": "Answer", "text": "No. We build solutions that are easy to manage without technical knowledge." } },
-        { "@type": "Question", "name": "Do you work with trades companies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we specialize in HVAC, plumbing, electrical, and contracting companies." } },
-        { "@type": "Question", "name": "What tools do you integrate with?", "acceptedAnswer": { "@type": "Answer", "text": "Calendly, Google Calendar, Gmail, HubSpot, Salesforce, Mailchimp, QuickBooks, Slack, and more." } },
-        { "@type": "Question", "name": "How is this different from hiring an IT person?", "acceptedAnswer": { "@type": "Answer", "text": "We specialize in AI automation, not maintaining existing systems. It's a focused engagement rather than an ongoing salary." } }
+        { "@type": "Question", "name": "What makes Grand River AI different from AI consulting?", "acceptedAnswer": { "@type": "Answer", "text": "The deliverable is working software. Strategy is used to scope and deploy production AI systems your team can test in real workflows." } },
+        { "@type": "Question", "name": "How fast can we launch an AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "Focused pilots can often launch in one to three weeks depending on data access, approvals, and integration complexity." } },
+        { "@type": "Question", "name": "Do we need technical staff?", "acceptedAnswer": { "@type": "Answer", "text": "No. Grand River AI designs systems around existing workflows and provides training, documentation, and support." } },
+        { "@type": "Question", "name": "What tools do you integrate with?", "acceptedAnswer": { "@type": "Answer", "text": "Common integrations include Google Workspace, Gmail, Calendly, Slack, HubSpot, QuickBooks, spreadsheets, databases, APIs, and web apps." } },
+        { "@type": "Question", "name": "Can you work with our existing team?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Grand River AI can build independently, pair with internal teams, or support an existing product roadmap." } }
     ] }
     </script>
 
     <script>
-        // Mobile menu
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        if (btn && menu) {
-            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-            menu.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+        const menuButton = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener("click", () => {
+                const isHidden = mobileMenu.classList.toggle("hidden");
+                menuButton.setAttribute("aria-expanded", String(!isHidden));
+            });
+            mobileMenu.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                    menuButton.setAttribute("aria-expanded", "false");
+                });
+            });
         }
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function(e) {
-                const t = document.querySelector(this.getAttribute('href'));
-                if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
+
+        const scrollToSection = (hash, behavior = "smooth") => {
+            const target = document.querySelector(hash);
+            if (!target) return false;
+            const headerOffset = 92;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({ top, behavior });
+            return true;
+        };
+
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+            link.addEventListener("click", (event) => {
+                const hash = link.getAttribute("href");
+                if (!hash || hash === "#") return;
+                if (scrollToSection(hash)) {
+                    event.preventDefault();
+                    history.pushState(null, "", hash);
+                }
             });
         });
-        // Scroll reveal
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-        }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        if (window.location.hash) {
+            requestAnimationFrame(() => scrollToSection(window.location.hash, "auto"));
+            window.addEventListener("load", () => scrollToSection(window.location.hash, "auto"));
+        }
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const revealItems = document.querySelectorAll(".reveal-on-scroll");
+
+        if (!prefersReducedMotion && "IntersectionObserver" in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+
+            revealItems.forEach((item, index) => {
+                item.style.transitionDelay = `${Math.min(index % 6, 5) * 55}ms`;
+                revealObserver.observe(item);
+            });
+        } else {
+            revealItems.forEach((item) => item.classList.add("is-visible"));
+        }
+
+        const animateCount = (element) => {
+            if (element.dataset.counted === "true") return;
+            element.dataset.counted = "true";
+
+            const target = Number(element.dataset.countTo || "0");
+            const suffix = element.dataset.countSuffix || "";
+
+            if (prefersReducedMotion || !Number.isFinite(target)) {
+                element.textContent = `${target}${suffix}`;
+                return;
+            }
+
+            const duration = 900;
+            const start = performance.now();
+
+            const tick = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                element.textContent = `${Math.round(target * eased)}${suffix}`;
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+
+            requestAnimationFrame(tick);
+        };
+
+        const countItems = document.querySelectorAll("[data-count-to]");
+        if ("IntersectionObserver" in window) {
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animateCount(entry.target);
+                        countObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            countItems.forEach((item) => countObserver.observe(item));
+        } else {
+            countItems.forEach(animateCount);
+        }
+
+        document.querySelectorAll(".faq-item").forEach((item) => {
+            const toggle = () => {
+                const isOpen = item.classList.toggle("open");
+                item.setAttribute("aria-expanded", String(isOpen));
+            };
+            item.addEventListener("click", toggle);
+            item.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    toggle();
+                }
+            });
+        });
     </script>
 </body>
 </html>
