@@ -19,27 +19,7 @@
     <meta name="twitter:title" content="Grand River AI | Production AI Systems for Ontario Businesses">
     <meta name="twitter:description" content="Production AI systems that ship. Not just advice.">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23fb7185'%3EAI%3C/text%3E%3C/svg%3E">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        carbon: "#0a0a0a",
-                        panel: "#111111",
-                        line: "#262626",
-                        soft: "#d4d4d8",
-                        dim: "#a1a1aa",
-                        ember: "#f97316",
-                        rose: "#ec4899"
-                    },
-                    fontFamily: {
-                        sans: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="/assets/styles.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S07N1V724"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -47,116 +27,22 @@
         gtag("js", new Date());
         gtag("config", "G-5S07N1V724");
     </script>
-    <style>
-        html { scroll-padding-top: 84px; }
-        body { background: #0a0a0a; }
-        a:focus-visible, button:focus-visible { outline: 2px solid #fb7185; outline-offset: 3px; }
-        .gradient-cta { background: linear-gradient(135deg, #f97316, #ec4899); }
-        .text-gradient { background: linear-gradient(135deg, #f97316, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .card-line { background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01)); }
-        .motion-grid {
-            background-image:
-                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-            background-size: 56px 56px;
-            animation: grid-drift 18s linear infinite;
-            mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
-        }
-        .motion-scan {
-            background: linear-gradient(90deg, transparent, rgba(236,72,153,0.2), rgba(249,115,22,0.14), transparent);
-            animation: scan-pass 5.5s ease-in-out infinite;
-        }
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(26px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .reveal-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .motion-card {
-            transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
-        }
-        .motion-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(236,72,153,0.5);
-            box-shadow: 0 24px 80px rgba(236,72,153,0.08);
-        }
-        .live-workflow {
-            background:
-                linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
-                #0f0f0f;
-        }
-        .workflow-step {
-            opacity: 0.46;
-            animation: workflow-pulse 6s ease-in-out infinite;
-        }
-        .workflow-step:nth-child(2) { animation-delay: 1s; }
-        .workflow-step:nth-child(3) { animation-delay: 2s; }
-        .workflow-step:nth-child(4) { animation-delay: 3s; }
-        .workflow-line::before {
-            content: "";
-            position: absolute;
-            inset: 0 auto 0 0;
-            width: 35%;
-            background: linear-gradient(90deg, transparent, #ec4899, #f97316, transparent);
-            animation: line-flow 3.8s ease-in-out infinite;
-        }
-        .stack-marquee {
-            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-        }
-        .stack-track {
-            width: max-content;
-            animation: stack-marquee 30s linear infinite;
-        }
-        .stack-marquee:hover .stack-track { animation-play-state: paused; }
-        @keyframes grid-drift {
-            from { background-position: 0 0, 0 0; }
-            to { background-position: 56px 56px, 56px 56px; }
-        }
-        @keyframes scan-pass {
-            0%, 100% { transform: translateX(-65%); opacity: 0; }
-            20%, 60% { opacity: 1; }
-            80% { transform: translateX(65%); opacity: 0; }
-        }
-        @keyframes workflow-pulse {
-            0%, 100% { opacity: 0.42; transform: translateX(0); }
-            18%, 34% { opacity: 1; transform: translateX(4px); }
-        }
-        @keyframes line-flow {
-            0% { transform: translateX(-110%); opacity: 0; }
-            20%, 70% { opacity: 1; }
-            100% { transform: translateX(300%); opacity: 0; }
-        }
-        @keyframes stack-marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
-        .faq-item.open .faq-answer { max-height: 260px; }
-        .faq-item.open .faq-plus { transform: rotate(45deg); }
-        .faq-plus { transition: transform 0.2s ease; }
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
-            .reveal-on-scroll { opacity: 1; transform: none; }
-        }
-    </style>
+    <!-- All styles compiled into /assets/styles.css -->
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans antialiased selection:bg-rose/30 selection:text-white">
     <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-carbon/88 backdrop-blur-xl">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-            <a href="#" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-white" aria-label="Grand River AI home">
+            <a href="/" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-white" aria-label="Grand River AI home">
                 <span class="flex h-7 w-7 items-center justify-center rounded-md border border-line bg-white/[0.03] text-xs font-bold text-gradient">AI</span>
                 <span>Grand River <span class="text-rose">AI</span></span>
             </a>
             <nav class="hidden items-center gap-7 text-xs font-medium text-soft md:flex">
-                <a href="#audit" class="hover:text-white transition-colors">Free audit</a>
-                <a href="#services" class="hover:text-white transition-colors">Services</a>
-                <a href="#work" class="hover:text-white transition-colors">Work</a>
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                <a href="/services/" class="hover:text-white transition-colors">Services</a>
+                <a href="/#work" class="hover:text-white transition-colors">Work</a>
+                <a href="/#audit" class="hover:text-white transition-colors">Free audit</a>
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <a href="/#about" class="hover:text-white transition-colors">About</a>
+                <a href="/#faq" class="hover:text-white transition-colors">FAQ</a>
                 <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta rounded-lg px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-rose/15 transition-transform active:scale-[0.98]">Book a call</a>
             </nav>
             <button id="mobileMenuBtn" class="md:hidden -mr-2 rounded-lg p-2 text-white" aria-label="Toggle menu" aria-expanded="false">
@@ -165,11 +51,12 @@
         </div>
         <div id="mobileMenu" class="hidden border-t border-line bg-carbon md:hidden">
             <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4 text-sm text-soft">
-                <a href="#audit" class="py-3 hover:text-white">Free audit</a>
-                <a href="#services" class="py-3 hover:text-white">Services</a>
-                <a href="#work" class="py-3 hover:text-white">Work</a>
-                <a href="#about" class="py-3 hover:text-white">About</a>
-                <a href="#faq" class="py-3 hover:text-white">FAQ</a>
+                <a href="/services/" class="py-3 hover:text-white">Services</a>
+                <a href="/#work" class="py-3 hover:text-white">Work</a>
+                <a href="/#audit" class="py-3 hover:text-white">Free audit</a>
+                <a href="/blog/" class="py-3 hover:text-white">Blog</a>
+                <a href="/#about" class="py-3 hover:text-white">About</a>
+                <a href="/#faq" class="py-3 hover:text-white">FAQ</a>
                 <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta mt-2 rounded-lg px-5 py-3 text-center font-bold text-white">Book a call</a>
             </nav>
         </div>
@@ -482,6 +369,68 @@
             </div>
         </section>
 
+        <section id="lead-magnet" class="scroll-mt-24 border-b border-line bg-white/[0.015]">
+            <div class="mx-auto max-w-4xl px-5 py-20 md:py-28">
+                <div class="text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Free resource</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl">The Ontario Business AI Readiness Checklist.</h2>
+                    <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-soft">A 20-point self-assessment that shows exactly where AI can save your team time. Download the PDF, run the checklist, and find your first automation opportunity.</p>
+                </div>
+                <div class="mt-10 grid gap-4 sm:grid-cols-3">
+                    <div class="motion-card reveal-on-scroll rounded-lg border border-line p-5 text-center">
+                        <p class="text-2xl font-extrabold text-rose">20</p>
+                        <p class="mt-1 text-xs text-soft">readiness checkpoints across your business</p>
+                    </div>
+                    <div class="motion-card reveal-on-scroll rounded-lg border border-line p-5 text-center">
+                        <p class="text-2xl font-extrabold text-rose">15</p>
+                        <p class="mt-1 text-xs text-soft">tasks you can automate identified in the guide</p>
+                    </div>
+                    <div class="motion-card reveal-on-scroll rounded-lg border border-line p-5 text-center">
+                        <p class="text-2xl font-extrabold text-rose">1</p>
+                        <p class="mt-1 text-xs text-soft">quick-win action plan you can build immediately</p>
+                    </div>
+                </div>
+                <form id="leadForm" class="mt-10 mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
+                    <input type="email" name="email" placeholder="Your work email" required class="flex-1 rounded-xl border border-line bg-carbon px-5 py-3 text-sm text-white placeholder:text-dim focus:border-rose focus:outline-none">
+                    <button type="submit" class="gradient-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-bold text-white shadow-lg shadow-rose/20 transition-transform active:scale-[0.98]">Get the checklist →</button>
+                </form>
+                <p class="mt-3 text-center text-xs text-dim">No spam. One email with the PDF, then you decide if you want the free audit.</p>
+                <div id="leadSuccess" class="mt-4 hidden rounded-lg border border-rose/40 bg-rose/10 px-5 py-4 text-center text-sm text-white">
+                    <strong>Checklist sent.</strong> Check your inbox for the PDF. If you don't see it in 5 minutes, email <a href="mailto:hello@grandriverai.ca" class="underline">hello@grandriverai.ca</a>.
+                </div>
+            </div>
+        </section>
+
+        <section id="trust" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-20 md:py-24">
+                <div class="grid gap-10 lg:grid-cols-3 lg:items-start">
+                    <div class="lg:col-span-1">
+                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Why teams choose Grand River AI</p>
+                        <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-4xl">Built for trust. Not a black box.</h2>
+                        <p class="mt-5 text-base leading-7 text-soft">You should know exactly what you are getting, how it works, and what it costs. Here is what every engagement includes.</p>
+                    </div>
+                    <div class="grid gap-4 sm:grid-cols-2 lg:col-span-2">
+                        <div class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                            <h3 class="text-base font-bold text-white">Production code, not slide decks</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">Every engagement ends with deployed, documented software your team controls. Full source code handover.</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                            <h3 class="text-base font-bold text-white">Fixed-scope pilot first</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">Start with the smallest useful build. You see results before committing to anything larger.</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                            <h3 class="text-base font-bold text-white">Ontario-based, locally reachable</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">Real person, real phone number, real response within 24 hours. Based in Paris, Ontario — not an overseas agency.</p>
+                        </div>
+                        <div class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                            <h3 class="text-base font-bold text-white">Your data stays yours</h3>
+                            <p class="mt-2 text-sm leading-6 text-soft">No data lock-in. All systems are documented and transferable. Privacy-first architecture with clear data handling policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="faq" class="scroll-mt-24 border-b border-line">
             <div class="mx-auto max-w-3xl px-5 py-20 md:py-28">
                 <div class="text-center">
@@ -542,13 +491,17 @@
     </main>
 
     <footer class="border-t border-line pb-24 md:pb-0">
-        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-5 py-10 text-xs text-dim sm:flex-row">
-            <p>© 2026 Grand River AI</p>
-            <div class="flex flex-wrap items-center justify-center gap-5">
-                <a href="tel:+12269759417" class="hover:text-white">(226) 975-9417</a>
-                <a href="mailto:hello@grandriverai.ca" class="hover:text-white">hello@grandriverai.ca</a>
-                <a href="#services" class="hover:text-white">Services</a>
-                <a href="#contact" class="hover:text-white">Contact</a>
+        <div class="mx-auto max-w-6xl px-5 py-10 text-xs text-dim">
+            <div class="flex flex-col items-center justify-between gap-5 sm:flex-row">
+                <p>© 2026 Grand River AI</p>
+                <div class="flex flex-wrap items-center justify-center gap-5">
+                    <a href="tel:+12269759417" class="hover:text-white">(226) 975-9417</a>
+                    <a href="mailto:hello@grandriverai.ca" class="hover:text-white">hello@grandriverai.ca</a>
+                    <a href="/services/" class="hover:text-white">Services</a>
+                    <a href="/blog/" class="hover:text-white">Blog</a>
+                    <a href="/privacy" class="hover:text-white">Privacy</a>
+                    <a href="/terms" class="hover:text-white">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -709,6 +662,42 @@
                 }
             });
         });
+
+        /* Lead magnet form — downloads PDF and opens email client to notify business */
+        const leadForm = document.getElementById("leadForm");
+        if (leadForm) {
+            leadForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const email = this.querySelector('input[name="email"]').value;
+
+                /* Track in GA4 */
+                if (typeof gtag === "function") {
+                    gtag("event", "lead_magnet_download", {
+                        event_category: "engagement",
+                        event_label: "AI Readiness Checklist",
+                    });
+                }
+
+                /* Download the PDF directly */
+                const link = document.createElement("a");
+                link.href = "/assets/grand-river-ai-readiness-checklist.pdf";
+                link.download = "grand-river-ai-readiness-checklist.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                /* Show success message */
+                document.getElementById("leadSuccess").classList.remove("hidden");
+                leadForm.querySelector("button").textContent = "Downloaded ✓";
+                leadForm.querySelector("button").disabled = true;
+                leadForm.querySelector("button").style.opacity = "0.6";
+
+                /* Open email client so Hiren gets the lead's email address */
+                setTimeout(function () {
+                    window.location.href = "mailto:hello@grandriverai.ca?subject=AI%20Readiness%20Checklist%20Download&body=Email%20address%3A%20" + encodeURIComponent(email) + "%0A%0AI%20downloaded%20the%20checklist%20and%20would%20like%20to%20discuss%20my%20AI%20readiness%20score.";
+                }, 500);
+            });
+        }
     </script>
 </body>
 </html>

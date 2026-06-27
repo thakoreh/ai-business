@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Integration | Grand River AI</title>
+    <meta name="description" content="LLM integration services: OpenAI, Claude, RAG, vector search, structured outputs, and prompt pipelines connected to your existing product or workflow.">
+    <link rel="canonical" href="https://grandriverai.ca/services/llm-integration.html">
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Paris">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grandriverai.ca/services/llm-integration.html">
+    <meta property="og:title" content="LLM Integration | Grand River AI">
+    <meta property="og:description" content="Connect OpenAI, Claude, RAG, vector search, structured outputs, and prompt pipelines to your product.">
+    <meta property="og:locale" content="en_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LLM Integration | Grand River AI">
+    <meta name="twitter:description" content="Production LLM integrations for existing products and workflows.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23fb7185'%3EAI%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S07N1V724"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-5S07N1V724");
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "LLM Integration",
+        "name": "LLM Integration",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Grand River AI",
+            "url": "https://grandriverai.ca/",
+            "telephone": "+1-226-975-9417",
+            "email": "hello@grandriverai.ca",
+            "priceRange": "$$",
+            "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressRegion": "Ontario", "addressCountry": "CA" },
+            "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"]
+        },
+        "areaServed": ["Paris","Brantford","Brant County","Kitchener","Waterloo","Cambridge"],
+        "description": "OpenAI, Claude, RAG, vector search, structured outputs, and prompt pipeline integrations for existing products and workflows."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grandriverai.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://grandriverai.ca/services/" },
+            { "@type": "ListItem", "position": 3, "name": "LLM Integration", "item": "https://grandriverai.ca/services/llm-integration.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Which LLM provider should we use?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your use case, latency requirements, budget, and data sensitivity. We help you evaluate OpenAI, Anthropic Claude, and open-source options, and we build with provider abstraction so you can switch models as the landscape evolves." } },
+            { "@type": "Question", "name": "What is RAG and do we need it?", "acceptedAnswer": { "@type": "Answer", "text": "Retrieval-Augmented Generation grounds the model in your own documents and data so answers are accurate and citeable rather than invented. If your use case depends on internal knowledge — policies, product specs, past tickets — you need RAG." } },
+            { "@type": "Question", "name": "How do you prevent hallucinations?", "acceptedAnswer": { "@type": "Answer", "text": "We use grounding via RAG, structured output schemas, confidence thresholds, and human review for high-stakes outputs. No LLM integration is 100% accurate, but the right architecture keeps failures rare, visible, and recoverable." } },
+            { "@type": "Question", "name": "Can you integrate with our existing codebase?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with Python, Node.js, Next.js, and most modern stacks. We can build new endpoints, add AI features to existing products, or wrap LLM calls behind your own API." } }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-[#0a0a0a] text-white font-sans antialiased selection:bg-rose/30 selection:text-white">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-carbon/88 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+            <a href="/" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-white" aria-label="Grand River AI home">
+                <span class="flex h-7 w-7 items-center justify-center rounded-md border border-line bg-white/[0.03] text-xs font-bold text-gradient">AI</span>
+                <span>Grand River <span class="text-rose">AI</span></span>
+            </a>
+            <nav class="hidden items-center gap-7 text-xs font-medium text-soft md:flex">
+                <a href="/#audit" class="hover:text-white transition-colors">Free audit</a>
+                <a href="/services/index.html" class="text-white transition-colors">Services</a>
+                <a href="/#work" class="hover:text-white transition-colors">Work</a>
+                <a href="/#about" class="hover:text-white transition-colors">About</a>
+                <a href="/#faq" class="hover:text-white transition-colors">FAQ</a>
+                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta rounded-lg px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-rose/15 transition-transform active:scale-[0.98]">Book a call</a>
+            </nav>
+            <button id="mobileMenuBtn" class="md:hidden -mr-2 rounded-lg p-2 text-white" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden border-t border-line bg-carbon md:hidden">
+            <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4 text-sm text-soft">
+                <a href="/#audit" class="py-3 hover:text-white">Free audit</a>
+                <a href="/services/index.html" class="py-3 hover:text-white">Services</a>
+                <a href="/#work" class="py-3 hover:text-white">Work</a>
+                <a href="/#about" class="py-3 hover:text-white">About</a>
+                <a href="/#faq" class="py-3 hover:text-white">FAQ</a>
+                <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta mt-2 rounded-lg px-5 py-3 text-center font-bold text-white">Book a call</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative overflow-hidden border-b border-line">
+            <div class="motion-grid absolute inset-0 opacity-70" aria-hidden="true"></div>
+            <div class="motion-scan absolute left-0 top-24 h-px w-full" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-6xl px-5 pb-20 pt-32 md:pt-40">
+                <nav class="text-xs text-dim mb-8" aria-label="Breadcrumb">
+                    <a href="/" class="hover:text-white">Home</a>
+                    <span class="mx-2">›</span>
+                    <a href="/services/index.html" class="hover:text-white">Services</a>
+                    <span class="mx-2">›</span>
+                    <span class="text-soft">LLM Integration</span>
+                </nav>
+                <h1 class="text-4xl font-extrabold leading-[1.05] tracking-normal text-white md:text-6xl">LLM integration for real products.</h1>
+                <p class="mt-6 max-w-2xl text-base leading-8 text-soft md:text-lg">Connect OpenAI, Claude, retrieval-augmented generation, vector search, structured outputs, and prompt pipelines to your existing product or workflow. Production-grade integrations with the reliability, observability, and cost controls that real usage demands.</p>
+                <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                    <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta inline-flex min-h-12 items-center justify-center rounded-xl px-7 text-sm font-bold text-white shadow-2xl shadow-rose/20 transition-transform active:scale-[0.98]">
+                        Book a free audit
+                        <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a href="/services/index.html" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-line px-7 text-sm font-bold text-white hover:border-rose/70 transition-colors">All services</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="mx-auto max-w-2xl">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">The opportunity</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-4xl">Large language models are infrastructure now.</h2>
+                    <p class="mt-5 text-base leading-7 text-soft">Calling an LLM API for the first time takes ten minutes. Building an integration that is accurate, reliable, cost-controlled, and maintainable in production takes considerably more. The gap between a prototype and a system you can ship to customers is where most AI projects stall — and where most of the value is either captured or lost.</p>
+                    <p class="mt-4 text-base leading-7 text-soft">The hard parts are not the model. They are everything around it: grounding outputs in your real data so the model does not hallucinate, structuring responses so downstream code can rely on them, managing context windows and token costs, handling failures and rate limits gracefully, evaluating quality as models and prompts change, and keeping the whole system observable so you know when something breaks.</p>
+                    <p class="mt-4 text-base leading-7 text-soft">We build that layer. Whether you are adding an AI feature to an existing SaaS product, embedding intelligent document processing into an internal tool, or standing up a knowledge base that actually answers questions accurately, the integration architecture is what determines whether the result is a toy or a product.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="mx-auto max-w-2xl text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">What we build</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-4xl">The components of a production LLM system.</h2>
+                    <p class="mt-5 text-base leading-7 text-soft">A real integration is a pipeline of specialized components. Here is what we typically assemble, tuned to your use case.</p>
+                </div>
+                <div class="mt-12 grid gap-4 md:grid-cols-2">
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-lg font-semibold text-white">Model selection and abstraction</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">We evaluate OpenAI, Anthropic Claude, and open-source models against your requirements — accuracy, latency, cost, data sensitivity — and build with a provider abstraction layer so you can swap models as the landscape shifts without rewriting your application.</p>
+                    </article>
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-lg font-semibold text-white">Retrieval-Augmented Generation (RAG)</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">We ground model outputs in your own documents, knowledge base, and data so answers are accurate, citeable, and current. The model reads your information first, then responds — dramatically reducing hallucinations on domain-specific questions.</p>
+                    </article>
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-lg font-semibold text-white">Vector search</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">We index your content using embeddings so the system can find semantically relevant information fast — across thousands of documents, tickets, product specs, or past conversations. This is the retrieval engine that powers accurate RAG.</p>
+                    </article>
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6">
+                        <h3 class="text-lg font-semibold text-white">Structured outputs</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">We enforce JSON schemas and validation so the model returns data your code can trust, not free-form text that breaks downstream. This turns an LLM from a chatbot into a reliable data-processing component inside a larger pipeline.</p>
+                    </article>
+                    <article class="motion-card reveal-on-scroll card-line rounded-lg border border-line p-6 md:col-span-2">
+                        <h3 class="text-lg font-semibold text-white">Prompt pipelines and orchestration</h3>
+                        <p class="mt-3 text-sm leading-6 text-soft">Production prompts are rarely a single call. They are multi-step pipelines: retrieve, reason, draft, self-check, format, and output. We design and version these pipelines with evaluation harnesses, fallback logic, cost controls, and full logging so quality is measurable and the system degrades gracefully under load or failure.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-line">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="grid gap-10 md:grid-cols-2">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Production concerns</p>
+                        <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-4xl">Built to run in production, not just in a demo.</h2>
+                        <p class="mt-5 text-base leading-7 text-soft">A demo that works on three examples is not a product. Every integration we ship is designed for the realities of production traffic: unpredictable inputs, rate limits, cost spikes, model drift, and the occasional user who tries to break things. We bake in the safeguards that keep the system honest.</p>
+                        <p class="mt-4 text-base leading-7 text-soft">That means token budgets and cost monitoring so a runaway loop cannot drain your API budget overnight. It means evaluation suites so you know whether a prompt change improved or regressed quality before shipping. It means graceful degradation — if the primary model is unavailable, the system falls back rather than crashing. And it means observability: you can see every request, every cost, every failure, in real time.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="rounded-lg border border-line p-5">
+                            <p class="text-sm font-bold text-rose">Cost controls</p>
+                            <p class="mt-2 text-sm leading-6 text-soft">Token budgets, caching, and per-request cost tracking prevent surprise bills and keep unit economics sane.</p>
+                        </div>
+                        <div class="rounded-lg border border-line p-5">
+                            <p class="text-sm font-bold text-rose">Evaluation harnesses</p>
+                            <p class="mt-2 text-sm leading-6 text-soft">Automated test suites run before every prompt or model change so regressions are caught, not discovered by users.</p>
+                        </div>
+                        <div class="rounded-lg border border-line p-5">
+                            <p class="text-sm font-bold text-rose">Observability and fallbacks</p>
+                            <p class="mt-2 text-sm leading-6 text-soft">Full request logging, latency tracking, and automatic fallback to backup models when a provider has an outage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-line bg-white/[0.015]">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="mx-auto max-w-2xl text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">How it works</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-4xl">From integration plan to production deploy.</h2>
+                </div>
+                <div class="mt-12 grid gap-4 md:grid-cols-3">
+                    <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6">
+                        <p class="text-sm font-bold text-rose">01</p>
+                        <h3 class="mt-3 text-lg font-semibold text-white">Scope the integration</h3>
+                        <p class="mt-2 text-sm leading-6 text-soft">We define the use case, success metrics, data sources, accuracy requirements, and constraints. We evaluate providers and pick the right architecture before writing production code.</p>
+                    </div>
+                    <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6">
+                        <p class="text-sm font-bold text-rose">02</p>
+                        <h3 class="mt-3 text-lg font-semibold text-white">Build and validate</h3>
+                        <p class="mt-2 text-sm leading-6 text-soft">We build the pipeline — retrieval, prompting, structured outputs, guardrails — and validate it against real examples with an evaluation harness. Accuracy is measured, not assumed.</p>
+                    </div>
+                    <div class="motion-card reveal-on-scroll rounded-lg border border-line p-6">
+                        <p class="text-sm font-bold text-rose">03</p>
+                        <h3 class="mt-3 text-lg font-semibold text-white">Deploy and monitor</h3>
+                        <p class="mt-2 text-sm leading-6 text-soft">We ship to production with monitoring, cost controls, and fallbacks. We watch real usage, tune quality, and hand over documentation so your team can maintain and extend the system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="scroll-mt-24 border-b border-line">
+            <div class="mx-auto max-w-3xl px-5 py-16 md:py-24">
+                <div class="text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-rose">Common questions</p>
+                    <h2 class="mt-4 text-3xl font-bold tracking-normal text-white md:text-4xl">LLM integration questions, answered.</h2>
+                </div>
+                <div class="mt-10 space-y-3">
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">Which LLM provider should we use?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">It depends on your use case, latency requirements, budget, and data sensitivity. OpenAI and Anthropic Claude are the most common choices for production workloads, but open-source models like Llama can make sense for cost or privacy reasons. We help you evaluate the tradeoffs and build with provider abstraction so you can switch models as the landscape evolves without rewriting your application.</p></div>
+                    </div>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">What is RAG and do we need it?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">Retrieval-Augmented Generation grounds the model in your own documents and data so answers are accurate and citeable rather than invented from the model's training data. If your use case depends on internal knowledge — company policies, product specs, past support tickets, legal documents — you almost certainly need RAG. Without it, the model will confidently make things up.</p></div>
+                    </div>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">How do you prevent hallucinations?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">We use a combination of techniques: grounding via RAG so the model references real sources, structured output schemas so responses are constrained, confidence thresholds so low-certainty outputs are flagged, and human review for high-stakes decisions. No LLM integration is one hundred percent accurate, but the right architecture keeps failures rare, visible, and recoverable rather than silent and damaging.</p></div>
+                    </div>
+                    <div class="faq-item cursor-pointer rounded-lg border border-line p-5" role="button" tabindex="0" aria-expanded="false">
+                        <div class="flex items-center justify-between gap-4">
+                            <p class="font-medium text-white">Can you integrate with our existing codebase?</p>
+                            <span class="faq-plus text-xl text-white">+</span>
+                        </div>
+                        <div class="faq-answer"><p class="mt-4 text-sm leading-6 text-soft">Yes. We work with Python, Node.js, Next.js, and most modern web stacks. We can build new API endpoints, add AI features to existing products, wrap LLM calls behind your own internal API, or integrate with platforms like Supabase, Vercel, and standard cloud infrastructure. We meet your codebase where it is.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-mt-24">
+            <div class="mx-auto max-w-4xl px-5 py-20 text-center md:py-28">
+                <h2 class="text-3xl font-extrabold tracking-normal text-white md:text-5xl">Adding AI to your product?</h2>
+                <p class="mx-auto mt-5 max-w-xl text-base leading-7 text-soft">Book a free audit. We assess your use case, recommend an architecture, and identify the highest-value integration to build first.</p>
+                <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                    <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta inline-flex min-h-12 items-center justify-center rounded-xl px-7 text-sm font-bold text-white shadow-2xl shadow-rose/20 transition-transform active:scale-[0.98]">Book a discovery call →</a>
+                    <a href="mailto:hello@grandriverai.ca" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-line px-7 text-sm font-bold text-white hover:border-rose/70 transition-colors">hello@grandriverai.ca</a>
+                </div>
+                <p class="mt-6"><a href="/" class="text-xs text-dim hover:text-white">← Back to home</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-line pb-24 md:pb-0">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-5 py-10 text-xs text-dim sm:flex-row">
+            <p>© 2026 Grand River AI</p>
+            <div class="flex flex-wrap items-center justify-center gap-5">
+                <a href="tel:+122****9417" class="hover:text-white">(226) 975-9417</a>
+                <a href="mailto:hello@grandriverai.ca" class="hover:text-white">hello@grandriverai.ca</a>
+                <a href="/services/index.html" class="hover:text-white">Services</a>
+                <a href="/" class="hover:text-white">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-carbon/95 p-3 backdrop-blur-md md:hidden">
+        <a href="https://calendly.com/hirenthakore/ai-automation-discovery-call" target="_blank" rel="noopener" class="gradient-cta flex min-h-12 items-center justify-center rounded-xl text-sm font-bold text-white shadow-lg shadow-rose/20">Book a call</a>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener("click", () => {
+                const isHidden = mobileMenu.classList.toggle("hidden");
+                menuButton.setAttribute("aria-expanded", String(!isHidden));
+            });
+            mobileMenu.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                    menuButton.setAttribute("aria-expanded", "false");
+                });
+            });
+        }
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const revealItems = document.querySelectorAll(".reveal-on-scroll");
+        if (!prefersReducedMotion && "IntersectionObserver" in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+            revealItems.forEach((item) => revealObserver.observe(item));
+        } else {
+            revealItems.forEach((item) => item.classList.add("is-visible"));
+        }
+
+        document.querySelectorAll(".faq-item").forEach((item) => {
+            const toggle = () => {
+                const isOpen = item.classList.toggle("open");
+                item.setAttribute("aria-expanded", String(isOpen));
+            };
+            item.addEventListener("click", toggle);
+            item.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    toggle();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "grandriver-ai",
+  "version": "1.0.0",
+  "description": "Grand River AI website - grandriverai.ca",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o assets/styles.css --minify",
+    "build:pdf": "python scripts/generate-pdf.py",
+    "build": "npm run build:css && npm run build:pdf",
+    "dev": "tailwindcss -i src/input.css -o assets/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
